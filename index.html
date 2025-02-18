@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOXCARS</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-dm-sans overflow-x-hidden">
+    <!-- Header -->
+    <header
+      class="min-h-screen w-screen flex flex-col justify-between px-10 bg-[url(./assets/image-1.jpg)] bg-cover bg-center bg-no-repeat text-white"
+      id="top"
+    >
+      <!-- Nav Bar -->
+      <nav class="flex justify-between w-full py-5 items-center flex-nowrap">
+        <!-- menu & logo for mob -->
+        <section class="flex lg:hidden justify-between items-center w-full">
+          <a class="py-2 hover:cursor-pointer" id="menu-open">
+            <i class="fa-solid fa-bars pr-2"></i>Menu
+          </a>
+          <a class="px-5 py-2"
+            ><img src="./assets/logo.png" alt="logo" class="h-6"
+          /></a>
+        </section>
+        <!-- logo for large screee -->
+        <section class="hidden lg:flex justify-between items-center">
+          <a class="px-5 py-2"
+            ><img src="./assets/logo.png" alt="logo" class="h-6"
+          /></a>
+        </section>
+        <section
+          class="hidden lg:flex justify-around items-center flex-nowrap gap-1 px-10"
+        >
+          <!-- Home Dropdown -->
+          <nav class="relative group">
+            <a
+              href="#"
+              class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+            >
+              Home <i class="fa-solid fa-caret-down ml-1"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Home Style 1</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Home Style 2</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Home Style 3</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Listing Dropdown -->
+          <nav class="relative group">
+            <a
+              href="#"
+              class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+            >
+              Listing <i class="fa-solid fa-caret-down ml-1"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >New Listings</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Featured Cars</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Used Cars</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Blog Dropdown -->
+          <nav class="relative group">
+            <a
+              href="#"
+              class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+            >
+              Blog <i class="fa-solid fa-caret-down ml-1"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Latest News</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Car Reviews</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Industry Updates</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Pages Dropdown -->
+          <nav class="relative group">
+            <a
+              href="#"
+              class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+            >
+              Pages <i class="fa-solid fa-caret-down ml-1"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="px-4 py-5 text-center hover:opacity-90">About</a>
+          <a href="#" class="px-4 py-5 text-center hover:opacity-90">Contact</a>
+          <button class="px-2 hover:cursor-pointer">
+            <i class="fas fa-user text-2xs px-2"></i>Sign in
+          </button>
+          <button
+            class="border rounded-2xl px-4 py-2 text-bold hover:bg-[#405FF2] hover:cursor-pointer transition-all duration-300 ease-in-out"
+          >
+            Add Listing
+          </button>
+        </section>
+        <!-- Side Bar with Dropdowns -->
+        <section
+          id="menu"
+          class="absolute top-0 left-0 bg-slate-700 text-white w-full text-xl flex-col justify-center origin-left animate-open-menu animation-open-menu hidden md:w-2xl"
+        >
+          <button
+            class="text-8xl self-end px-6 hover:cursor-pointer"
+            id="menu-close"
+          >
+            &times;
+          </button>
+          <nav class="flex flex-col min-h-screen items-center z-50">
+            <!-- Mobile Home Dropdown -->
+            <details class="w-full group">
+              <summary
+                class="w-full py-5 text-center hover:opacity-90 cursor-pointer list-none"
+              >
+                Home <i class="fa-solid fa-caret-down ml-1"></i>
+              </summary>
+              <ul class="bg-slate-600 flex flex-col justify-center items-center gap-1">
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b "
+                    >Home Style 1</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    >Home Style 2</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 "
+                    >Home Style 3</a
+                  >
+                </li>
+              </ul>
+            </details>
+            <!-- Mobile Listing Dropdown -->
+            <details class="w-full group">
+              <summary
+                class="w-full py-5 text-center hover:opacity-90 cursor-pointer list-none"
+              >
+                Listing <i class="fa-solid fa-caret-down ml-1"></i>
+              </summary>
+              <ul class="bg-slate-600 flex flex-col justify-center items-center gap-1 ">
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    >New Listings</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    >Featured Cars</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 "
+                    >Used Cars</a
+                  >
+                </li>
+              </ul>
+            </details>
+            <!-- Blogs with drop down -->
+            <details class="w-full group">
+              <summary
+                class="w-full py-5 text-center hover:opacity-90 cursor-pointer list-none"
+              >
+                Blogs <i class="fa-solid fa-caret-down ml-1"></i>
+              </summary>
+              <ul class="bg-slate-600 flex flex-col justify-center items-center gap-1">
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    >Latest News</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    >Car Reviews</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 "
+                    >Industry Updates</a
+                  >
+                </li>
+              </ul>
+            </details>
+            <!-- Pages with drop down -->
+            <details class="w-full group">
+              <summary
+                class="w-full py-5 text-center hover:opacity-90 cursor-pointer list-none"
+              >
+                Pages <i class="fa-solid fa-caret-down ml-1"></i>
+              </summary>
+              <ul class="bg-slate-600 flex flex-col justify-center items-center gap-1">
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 "
+                    >FAQs</a
+                  >
+                </li>
+              </ul>
+            </details>
+            <!-- rest -->
+            <a href="#" class="w-full py-5 text-center hover:opacity-90"
+              >About</a
+            >
+            <a href="#" class="w-full py-5 text-center hover:opacity-90"
+              >Contact</a
+            >
+            <a href="#" class="w-full py-5 text-center hover:opacity-90">
+              <i class="fas fa-user text-2xs px-2"></i>Sign in
+            </a>
+            <a
+              href="#"
+              class="w-full py-5 text-center hover:opacity-90 text-bold"
+              >Add Listing</a
+            >
+          </nav>
+        </section>
+      </nav>
+      <!-- Hero Section -->
+      <main class="flex flex-col items-start gap-5 my-5">
+        <p class="text-base font-normal leading-7">
+          Shop Online. Pickup Today. It's Fast, Simple and Easy. Learn More.
+        </p>
+        <h1
+          class="font-dm text-5xl font-bold leading-16 tracking-[0%] mt-0 mb-7"
+        >
+          Fast, Simple and Easy
+        </h1>
+        <ul class="flex self-start gap-5 font-medium mb-3">
+          <li class="underline underline-offset-8">All</li>
+          <li>New</li>
+          <li>Used</li>
+        </ul>
+        <section
+          class="bg-white text-black flex flex-col justify-between items-center px-8 lg:px-10 py-4 lg:flex-row gap-4 m-auto lg:m-0 rounded-3xl w-full lg:w-auto"
+        >
+          <button
+            class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border rounded-2xl md:border-r border-gray-300 flex justify-between items-center w-full lg:w-auto"
+          >
+            <span>Any Makes</span> <i class="fa-solid fa-caret-down ml-8"></i>
+          </button>
+          <button
+            class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border md:border-r border-gray-300 rounded-2xl flex justify-between items-center w-full lg:w-auto"
+          >
+            <span>Any Models</span> <i class="fa-solid fa-caret-down ml-8"></i>
+          </button>
+          <button
+            class="border border-gray-300 rounded-2xl px-16 py-6 lg:py-3.5 flex justify-between items-center w-full lg:w-auto"
+          >
+            <span>Any Prices</span> <i class="fa-solid fa-caret-down ml-8"></i>
+          </button>
+          <button
+            class="bg-[#405FF2] px-16 py-6 lg:py-3.5 rounded-2xl text-white font-medium flex justify-between items-center hover:cursor-pointer w-full lg:w-auto"
+          >
+            <i class="fa-solid fa-magnifying-glass mr-8"></i><span>Search</span>
+          </button>
+        </section>
+      </main>
+      <!-- footer-scroller -->
+      <footer
+        class="flex justify-start items-center gap-20 overflow-x-scroll md:overflow-hidden py-6"
+      >
+        <button
+          class="flex justify-around items-center cursor-pointer underline underline-offset-8"
+        >
+          <img class="h-4 mr-2" src="./assets/suv.png" alt="suv" />SUV
+        </button>
+        <button class="flex justify-around items-center cursor-pointer">
+          <img class="h-4 mr-2" src="./assets/seden.png" alt="sedan" />Seden
+        </button>
+        <button class="flex justify-around items-center cursor-pointer">
+          <img
+            class="h-4 mr-2"
+            src="./assets/hetchback.png"
+            alt="hetchback"
+          />Hetchback
+        </button>
+        <button class="flex justify-around items-center cursor-pointer">
+          <img class="h-4 mr-2" src="./assets/coupe.png" alt="coupe" />Coupe
+        </button>
+        <button class="flex justify-around items-center cursor-pointer">
+          <img class="h-4 mr-2" src="./assets/hybrid.png" alt="hybrid" />Hybrid
+        </button>
+        <button class="flex justify-around items-center cursor-pointer">
+          <img
+            class="h-4 mr-2"
+            src="./assets/coupe.png"
+            alt="Convertible"
+          />Convertible
+        </button>
+      </footer>
+    </header>
+    <!-- Top Selling Cars -->
+    <main class="px-10 text-black">
+      <article class="flex justify-between items-center pt-10 mb-6">
+        <h1 class="font-medium text-3xl leading-10">
+          The Most Searched SUV Cars
+        </h1>
+        <button class="leading-4 hidden md:block">
+          View All <span style="font-size: 30px">&#8599;</span>
+        </button>
+      </article>
+      <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- card -->
+        <article
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group z-10"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/toyota.png"
+              alt="toyota"
+              class="h-full transition-transform duration-300 group-hover:scale-110"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+            <p
+              class="bg-[#3D923A] text-white text-sm px-4 py-1 absolute top-5 left-4 rounded-3xl"
+            >
+              Great Price
+            </p>
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              Toyota Camry New
+            </h1>
+            <p class="text-sm leading-3.5">
+              3.5 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>20 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>Automatic</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$45,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- populating cards -->
+        <!-- card 2-->
+        <article
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/Tcross.png"
+              alt="tCross"
+              class="h-full transition-transform duration-300 group-hover:scale-110"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              T-Cross-2023
+            </h1>
+            <p class="text-sm leading-3.5">
+              4.0 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>15 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>CVT</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$15,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-3 -->
+        <article
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/cClass.png"
+              alt="c-class"
+              class="h-full transition-transform duration-300 group-hover:scale-110"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              C-Class-2023
+            </h1>
+            <p class="text-sm leading-3.5">
+              4.0 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>50 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>Automatic</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$150,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-4 -->
+        <article
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/fordTranssit.png"
+              alt="Ford"
+              class="h-full transition-transform duration-300 group-hover:scale-110"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+            <p
+              class="bg-[#3D923A] text-white text-sm px-4 py-1 absolute top-5 left-4 rounded-3xl"
+            >
+              Great Price
+            </p>
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              Ford Transit-2021
+            </h1>
+            <p class="text-sm leading-3.5">
+              4.0 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>250 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Diesel</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>Manual</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$22,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-5 -->
+        <article
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/newGLC.png"
+              alt="newGLC"
+              class="h-full transition-transform duration-300 group-hover:scale-110"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+            <p
+              class="bg-[#405FF2] text-white text-sm px-4 py-1 absolute top-5 left-4 rounded-3xl"
+            >
+              Low Mileage
+            </p>
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              new GLC-2023
+            </h1>
+            <p class="text-sm leading-3.5">
+              4.0 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>50 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>Automatic</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$95,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-6 -->
+        <article
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/audiA6.png"
+              alt="audi"
+              class="h-full transition-transform duration-300 group-hover:scale-110"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              Audi A6 3.5 - New
+            </h1>
+            <p class="text-sm leading-3.5">
+              3.5 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>100 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>Automatic</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$58,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-7 -->
+        <article
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/corolla-atlis.png"
+              alt="corollaAtis"
+              class="h-full transition-transform duration-300 group-hover:scale-110"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              Corolla Altis - 2023
+            </h1>
+            <p class="text-sm leading-3.5">
+              3.5 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>1500 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>CVT</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$45,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-8 -->
+        <article
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/FordExplorer.png"
+              alt="ford"
+              class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+            <p
+              class="bg-[#3D923A] text-white text-sm px-4 py-1 absolute top-5 left-4 rounded-3xl"
+            >
+              Great Price
+            </p>
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              Ford Explorer 2023
+            </h1>
+            <p class="text-sm leading-3.5">
+              3.5 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>10 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Diesel</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>CVT</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$35,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+      </main>
+    </main>
+    <!-- Buy Car & Sell Car -->
+    <section
+      class="mx-auto px-10 py-12 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6"
+    >
+      <!-- Buy Car Card -->
+      <article class="bg-blue-50 rounded-lg p-8">
+        <header>
+          <h2 class="text-3xl font-bold mb-4">
+            Are You Looking<br />For a Car ?
+          </h2>
+        </header>
+        <p class="text-gray-700 mb-6 max-w-70">
+          We are committed to providing our customers with exceptional service.
+        </p>
+        <footer class="flex justify-between items-center">
+          <button
+            href="#"
+            class="bg-blue-600 text-white px-7 py-5 rounded-2xl hover:bg-blue-700 inline-flex items-center hover:cursor-pointer"
+          >
+            Get Started
+            <svg
+              class="w-4 h-4 ml-2"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <figure class="w-28 h-28 hidden md:block">
+            <img src="./assets/buy-car.png" alt="buy-car" />
+          </figure>
+        </footer>
+      </article>
+
+      <!-- Sell Car Card -->
+      <article class="bg-pink-50 rounded-lg p-8">
+        <header>
+          <h2 class="text-3xl font-bold mb-4">
+            Do You Want to<br />Sell a Car ?
+          </h2>
+        </header>
+        <p class="text-gray-700 mb-6 max-w-70">
+          We are committed to providing our customers with exceptional service.
+        </p>
+        <footer class="flex justify-between items-center">
+          <button
+            href="#"
+            class="bg-gray-900 text-white px-7 py-5 rounded-2xl hover:bg-gray-800 inline-flex items-center hover:cursor-pointer"
+          >
+            Get Started
+            <svg
+              class="w-4 h-4 ml-2"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <figure class="w-28 h-28 hidden md:block">
+            <img src="./assets/sell-car.png" alt="sell-car" />
+          </figure>
+        </footer>
+      </article>
+    </section>
+    <!-- Four USP -->
+    <article class="px-10 py-16 flex flex-col md:flex-row">
+      <header class="mb-16 flex-1">
+        <h2 class="text-4xl font-bold text-gray-900">
+          We're BIG on what<br />matters to you
+        </h2>
+      </header>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 flex-1">
+        <!-- Special Financing Offers -->
+        <article class="flex flex-col gap-4">
+          <figure class="w-12 h-12">
+            <img src="./assets/fin-offer.png" alt="fin-offer" />
+          </figure>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Special Financing Offers
+          </h3>
+          <p class="text-gray-600">
+            Our stress-free finance department that can find financial solutions
+            to save you money.
+          </p>
+        </article>
+
+        <!-- Trusted Car Dealership -->
+        <article class="flex flex-col gap-4">
+          <div class="w-12 h-12">
+            <figure class="w-12 h-12">
+              <img src="./assets/car-dealership.png" alt="fin-offer" />
+            </figure>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Trusted Car Dealership
+          </h3>
+          <p class="text-gray-600">
+            Our stress-free finance department that can find financial solutions
+            to save you money.
+          </p>
+        </article>
+
+        <!-- Transparent Pricing -->
+        <article class="flex flex-col gap-4">
+          <figure class="w-12 h-12">
+            <img src="./assets/trasparent-prising.png" alt="fin-offer" />
+          </figure>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Transparent Pricing
+          </h3>
+          <p class="text-gray-600">
+            Our stress-free finance department that can find financial solutions
+            to save you money.
+          </p>
+        </article>
+
+        <!-- Expert Car Service -->
+        <article class="flex flex-col gap-4">
+          <figure class="w-12 h-12">
+            <img src="./assets/car-service.png" alt="fin-offer" />
+          </figure>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Expert Car Service
+          </h3>
+          <p class="text-gray-600">
+            Our stress-free finance department that can find financial solutions
+            to save you money.
+          </p>
+        </article>
+      </section>
+    </article>
+    <!--Popular Makes -->
+    <section class="bg-[#050b20] text-white w-full">
+      <article class="flex justify-between items-center px-10 pt-20 mb-6">
+        <h1 class="font-medium text-3xl leading-10">Popular Makes</h1>
+        <button class="leading-4 hidden md:block">
+          View All <span style="font-size: 30px">&#8599;</span>
+        </button>
+      </article>
+      <nav class="mx-10 py-1.5 mb-2 border-b border-[#ffffff3d]">
+        <ul class="flex self-start gap-7 text-sm">
+          <li class="underline underline-offset-8 hover:cursor-pointer">
+            In Stock
+          </li>
+          <li class="hover:cursor-pointer">Audi</li>
+          <li class="hover:cursor-pointer">Ford</li>
+          <li class="hover:cursor-pointer">Mercedes Benz</li>
+        </ul>
+      </nav>
+      <!-- cards -->
+      <main class="flex gap-5 overflow-x-scroll lg:overflow-hidden mx-10 py-10">
+        <article
+          class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/Tcross.png"
+              alt="tCross"
+              class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              T-Cross-2023
+            </h1>
+            <p class="text-sm leading-3.5">
+              4.0 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles-white.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>15 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer-white.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic-white.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>CVT</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$15,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-3 -->
+        <article
+          class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/cClass.png"
+              alt="c-class"
+              class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              C-Class-2023
+            </h1>
+            <p class="text-sm leading-3.5">
+              4.0 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles-white.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>50 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer-white.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic-white.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>Automatic</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$150,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-4 -->
+        <article
+          class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/fordTranssit.png"
+              alt="Ford"
+              class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+            <p
+              class="bg-[#3D923A] text-white text-sm px-4 py-1 absolute top-5 left-4 rounded-3xl"
+            >
+              Great Price
+            </p>
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              Ford Transit-2021
+            </h1>
+            <p class="text-sm leading-3.5">
+              4.0 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles-white.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>250 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer-white.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Diesel</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic-white.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>Manual</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$22,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+        <!-- card-5 -->
+        <article
+          class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
+        >
+          <figure class="overflow-hidden relative">
+            <img
+              src="./assets/newGLC.png"
+              alt="newGLC"
+              class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
+            />
+            <img
+              src="./assets/bookmark.png"
+              alt="bookmark"
+              class="absolute top-5 right-4 h-9 w-9"
+            />
+            <p
+              class="bg-[#405FF2] text-white text-sm px-4 py-1 absolute top-5 left-4 rounded-3xl"
+            >
+              Low Mileage
+            </p>
+          </figure>
+          <header
+            class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+          >
+            <h1
+              class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+            >
+              new GLC-2023
+            </h1>
+            <p class="text-sm leading-3.5">
+              4.0 D5 PowerPulse Momentum 5dr AW…
+            </p>
+          </header>
+          <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/miles-white.png"
+                alt="miles"
+                class="h-5 w-5 object-contain"
+              />
+              <span>50 Miles</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/kilometer-white.png"
+                alt="petrol"
+                class="h-5 w-5 object-contain"
+              />
+              <span>Petrol</span>
+            </section>
+            <section class="flex flex-col justify-center items-center gap-1">
+              <img
+                src="./assets/automatic-white.png"
+                alt="automatic"
+                class="h-5 w-5 object-contain"
+              /><span>Automatic</span>
+            </section>
+          </main>
+          <footer class="flex justify-between mx-6 py-3">
+            <p class="font-bold text-lg leading-7.5">$95,000</p>
+            <p
+              class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
+            >
+              View Details &#8599;
+            </p>
+          </footer>
+        </article>
+      </main>
+      <section class="hidden md:flex gap-6 px-10 py-10">
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:cursor-pointer"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:cursor-pointer"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </section>
+    </section>
+
+    <!-- Reviews -->
+    <section class="px-10 py-16">
+      <section class="flex justify-between items-center mb-12">
+        <h2 class="text-4xl font-bold">
+          What Our<br />
+          Customers Say
+        </h2>
+        <section class="flex gap-4">
+          <button
+            class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </section>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Trustpilot Rating Section -->
+        <article class="flex flex-col gap-4">
+          <h3 class="text-xl font-semibold">Great</h3>
+          <section class="flex gap-1">
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+          </section>
+          <p class="text-sm text-gray-600">Based on 5,801 reviews</p>
+          <section class="flex self-start gap-5 items-center">
+            <i class="fa-solid fa-star text-2xl text-emerald-500 block"></i>
+            <span class="text-xl leading-6 font-medium">Trustpilot</span>
+          </section>
+        </article>
+
+        <!-- Review Section -->
+        <article class="flex flex-col gap-4">
+          <section class="flex items-center gap-2 mb-2">
+            <section class="flex gap-1">
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            </section>
+            <span class="text-sm text-gray-500">Verified</span>
+          </section>
+          <article class="mb-4 py-4">
+            <h3 class="font-semibold">Ali TUFAN</h3>
+            <p class="text-sm text-gray-500">Designer</p>
+          </article>
+          <p class="text-gray-800 text-xl font-medium">
+            I'd suggest Macklin Motors Nissan Glasgow South to a friend because
+            I had great service from my salesman Patrick and all of the team.
+          </p>
+          <figure class="flex gap-4 mt-4 items-center">
+            <img
+              src="/assets/profile-1.jpg"
+              alt="Profile 1"
+              class="w-12 h-12 rounded-full border-2 border-blue-400 p-0.5"
+            />
+            <img
+              src="/assets/profile-2.png"
+              alt="Profile 2"
+              class="w-10 h-10 rounded-full"
+            />
+            <img
+              src="/assets/profile-3.png"
+              alt="Profile 3"
+              class="w-10 h-10 rounded-full"
+            />
+          </figure>
+        </article>
+      </section>
+    </section>
+    <!-- Brnads -->
+    <section class="px-10 py-10 mb-10">
+      <article class="flex justify-between items-center pt-20 mb-6">
+        <h1 class="font-medium text-3xl leading-10">
+          Explore Our Premium Brands
+        </h1>
+        <button class="leading-4 hidden md:block">
+          Show All Brands <span style="font-size: 20px">&#8599;</span>
+        </button>
+      </article>
+      <main class="flex gap-5 overflow-x-scroll lg:overflow-hidden">
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./assets/audi-logo.png"
+            alt="audi"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">Audi</p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./assets/BMW-logo.png"
+            alt="bmw"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">BMW</p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./assets/ford-logo.png"
+            alt="Ford"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">Ford</p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./assets/medrcedes-logo.png"
+            alt="Mercedes"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">
+            Mercedes Benz
+          </p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./assets/peugeot-logo.png"
+            alt="peugeot"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">Peugeot</p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./assets/Volkswagen-logo.png"
+            alt="Volkswagen"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">Volkswagen</p>
+        </figure>
+      </main>
+    </section>
+    <!-- Baner -->
+    <article
+      class="bg-[#F9FBFC] px-10 flex flex-col md:flex-row justify-between gap-10 py-20"
+    >
+      <figure class="lg:h-3xl md:h-2xl h-xl">
+        <img
+          src="./assets/flex-shine-play.png"
+          alt="car-img"
+          class="rounded-xl h-full"
+        />
+      </figure>
+      <section
+        class="flex flex-col max-w-xl justify-center items-start px-10 gap-6"
+      >
+        <h1 class="font-bold text[#050B20] text-4xl leading-14">
+          Flexible Finance For Added Shine
+        </h1>
+        <p class="text-sm leading-7">
+          AA Car Finance allows you to get a quote without affecting your credit
+          rating. Find a car from any dealer, and we'll do the rest. With a
+          large panel of 30+ lenders we can help most drivers.
+        </p>
+        <button
+          href="#"
+          class="bg-blue-700 text-white px-6 py-4 rounded-lg hover:bg-blue-800 inline-flex items-center hover:cursor-pointer"
+        >
+          Find Out More
+          <svg
+            class="w-4 h-4 ml-2"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 17L17 7M17 7H7M17 7V17"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </section>
+    </article>
+    <!-- Stats -->
+    <article
+      class="px-10 py-14 flex flex-col md:flex-row justify-around items-center gap-6"
+    >
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-3xl leading-14">834M</h1>
+        <p class="text-sm leading-8">CARS FOR SALE</p>
+      </section>
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-3xl leading-14">715M</h1>
+        <p class="text-sm leading-8">DEALER REVIEWS</p>
+      </section>
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-3xl leading-14">96M</h1>
+        <p class="text-sm leading-8">VISITORS PER DAY</p>
+      </section>
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-3xl leading-14">230M</h1>
+        <p class="text-sm leading-8">VERIFIED DEALERS</p>
+      </section>
+    </article>
+    <!-- blog page -->
+    <article class="px-10 py-10">
+      <!-- heading -->
+      <article class="flex justify-between items-center mb-6">
+        <h1 class="font-medium text-3xl leading-10">Latest Blog Posts</h1>
+        <button class="leading-4 hidden md:block">
+          View All <span style="font-size: 20px">&#8599;</span>
+        </button>
+      </article>
+      <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- blog-1 -->
+        <section class="group">
+          <figure class="overflow-hidden rounded-2xl">
+            <img src="./assets/blog-car-1.png" alt="car-img" />
+          </figure>
+          <article>
+            <p class="py-1.5">
+              <span class="text-sm leading-6">Admin</span> &middot;
+              <span class="text-sm leading-6">November 22, 2023</span>
+            </p>
+            <p class="text-xl leading-7">
+              2024 BMW ALPINA XB7 with exclusive details, extraordinary
+            </p>
+          </article>
+        </section>
+        <!-- blog-2 -->
+        <section class="group">
+          <figure class="overflow-hidden rounded-2xl">
+            <img src="./assets/blog-car-2.png" alt="car-img" />
+          </figure>
+          <article>
+            <p class="py-1.5">
+              <span class="text-sm leading-6">Admin</span> &middot;
+              <span class="text-sm leading-6">November 22, 2023</span>
+            </p>
+            <p class="text-xl leading-7">
+              BMW X6 M50i is designed to exceed your sportiest.
+            </p>
+          </article>
+        </section>
+        <!-- blog-3 -->
+        <section class="group">
+          <figure class="overflow-hidden rounded-2xl">
+            <img src="./assets/blog-car-3.png" alt="car-img" />
+          </figure>
+          <article>
+            <p class="py-1.5">
+              <span class="text-sm leading-6">Admin</span> &middot;
+              <span class="text-sm leading-6">November 22, 2023</span>
+            </p>
+            <p class="text-xl leading-7">
+              BMW X5 Gold 2024 Sport Review: Light on Sport
+            </p>
+          </article>
+        </section>
+      </article>
+    </article>
+    <!-- FAQ -->
+    <section
+      class="w-full bg-[#405FF2] text-white flex justify-center md:justify-between flex-col md:flex-row items-start md:items-center px-10 py-10 gap-6"
+    >
+      <p class="font-medium text-3xl leading-7">
+        Have a Questions? Feel Free To Ask...
+      </p>
+      <figure class="flex gap-2">
+        <img src="./assets/phone.png" alt="" class="h-8" /><span
+          class="font-medium text-2xl leading-7"
+          >+91 884272842</span
+        >
+      </figure>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#050B20] text-white py-16 px-10 mx-auto">
+      <!-- Newsletter Section -->
+      <div
+        class="mb-16 flex flex-col md:flex-row justify-between items-center gap-3"
+      >
+        <section>
+          <h2 class="text-2xl font-semibold mb-2">Join BoxCar</h2>
+          <p class="text-gray-400 mb-4">
+            Receive pricing updates, shopping tips & more!
+          </p>
+        </section>
+        <form class="flex gap-4 w-full m-auto md:m-0 md:w-3/4 lg:w-xl relative">
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="flex-grow px-5 py-4.5 rounded-4xl bg-gray-800 border border-gray-700 text-white w-full"
+          />
+          <button
+            type="submit"
+            class="px-7 py-2 bg-blue-600 hover:bg-blue-700 rounded-3xl font-medium absolute top-2.5 right-3"
+          >
+            Sign Up
+          </button>
+        </form>
+      </div>
+
+      <!-- Footer Links Grid -->
+      <footer
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16"
+      >
+        <!-- Company Links -->
+        <nav class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Company</h3>
+          <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+          <a href="#" class="text-gray-400 hover:text-white">Blog</a>
+          <a href="#" class="text-gray-400 hover:text-white">Services</a>
+          <a href="#" class="text-gray-400 hover:text-white">FAQs</a>
+          <a href="#" class="text-gray-400 hover:text-white">Terms</a>
+          <a href="#" class="text-gray-400 hover:text-white">Contact Us</a>
+        </nav>
+
+        <!-- Quick Links -->
+        <nav class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Quick Links</h3>
+          <a href="#" class="text-gray-400 hover:text-white">Get in Touch</a>
+          <a href="#" class="text-gray-400 hover:text-white">Help Center</a>
+          <a href="#" class="text-gray-400 hover:text-white">Live Chat</a>
+          <a href="#" class="text-gray-400 hover:text-white">How it works</a>
+        </nav>
+
+        <!-- Our Brands -->
+        <nav class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Our Brands</h3>
+          <a href="#" class="text-gray-400 hover:text-white">Toyota</a>
+          <a href="#" class="text-gray-400 hover:text-white">Porsche</a>
+          <a href="#" class="text-gray-400 hover:text-white">Audi</a>
+          <a href="#" class="text-gray-400 hover:text-white">BMW</a>
+          <a href="#" class="text-gray-400 hover:text-white">Ford</a>
+          <a href="#" class="text-gray-400 hover:text-white">Nissan</a>
+          <a href="#" class="text-gray-400 hover:text-white">Peugeot</a>
+          <a href="#" class="text-gray-400 hover:text-white">Volkswagen</a>
+        </nav>
+
+        <!-- Vehicles Type -->
+        <nav class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Vehicles Type</h3>
+          <a href="#" class="text-gray-400 hover:text-white">Sedan</a>
+          <a href="#" class="text-gray-400 hover:text-white">Hatchback</a>
+          <a href="#" class="text-gray-400 hover:text-white">SUV</a>
+          <a href="#" class="text-gray-400 hover:text-white">Hybrid</a>
+          <a href="#" class="text-gray-400 hover:text-white">Electric</a>
+          <a href="#" class="text-gray-400 hover:text-white">Coupe</a>
+          <a href="#" class="text-gray-400 hover:text-white">Truck</a>
+          <a href="#" class="text-gray-400 hover:text-white">Convertible</a>
+        </nav>
+
+        <!-- Mobile App Section -->
+        <section class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Our Mobile App</h3>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-gray-400 hover:text-white bg-[#161c30] rounded-2xl py-2 px-4"
+          >
+            <i class="fa-brands fa-apple text-2xl"></i>
+            <span>Download on the<br /><strong>Apple Store</strong></span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-gray-400 hover:text-white bg-[#161c30] rounded-2xl py-2 px-4"
+          >
+            <i class="fa-brands fa-google-play text-2xl"></i>
+            <span>Get it on<br /><strong>Google Play</strong></span>
+          </a>
+
+          <h3 class="font-semibold mt-4 mb-2">Connect With Us</h3>
+          <section class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </section>
+        </section>
+      </footer>
+
+      <!-- Footer Bottom -->
+      <footer
+        class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800 relative gap-3"
+      >
+        <p class="text-gray-400 text-sm">
+          &copy; 2023 Boxcars.com. All rights reserved.
+        </p>
+        <section class="flex gap-4 text-sm text-gray-400">
+          <a href="#" class="hover:text-white">Terms & Conditions</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-white">Privacy Notice</a>
+        </section>
+        <button class="bg-[#405FF2] h-8 w-8 rounded-full hover:cursor-pointer">
+          <a href="#top"
+            ><i class="fa-solid fa-angle-up text-white text-xl"></i
+          ></a>
+        </button>
+      </footer>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
