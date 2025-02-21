@@ -30,17 +30,20 @@
       <nav class="flex justify-between w-full py-5 items-center flex-nowrap">
         <!-- menu & logo for mob -->
         <section class="flex lg:hidden justify-between items-center w-full">
-          <a class="py-2 hover:cursor-pointer" id="menu-open">
+          <a class="py-2 hover:cursor-pointer" id="menu-open" aria-label="menu">
             <i class="fa-solid fa-bars pr-2"></i>Menu
           </a>
-          <a class="px-5 py-2"
+          <a class="px-5 py-2" aria-label="logo"
             ><img src="./assets/logo.png" alt="logo" class="h-6"
           /></a>
         </section>
         <!-- logo for large screee -->
         <section class="hidden lg:flex justify-between items-center">
           <a class="px-5 py-2"
-            ><img src="./assets/logo.png" alt="logo" class="h-6"
+            ><img
+              src="./assets/logo.png"
+              alt="logo"
+              class="h-6 hover:cursor-pointer"
           /></a>
         </section>
         <section
@@ -51,24 +54,34 @@
             <a
               href="#"
               class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+              aria-label="home"
             >
-              Home <i class="fa-solid fa-caret-down ml-1"></i>
+              <span>Home </span><i class="fa-solid fa-caret-down ml-2"></i>
             </a>
             <ul
               class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
             >
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="home style 1"
                   >Home Style 1</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="home style 2"
                   >Home Style 2</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="home style 3"
                   >Home Style 3</a
                 >
               </li>
@@ -79,24 +92,34 @@
             <a
               href="#"
               class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+              aria-label="listing"
             >
-              Listing <i class="fa-solid fa-caret-down ml-1"></i>
+              <span>Listing</span> <i class="fa-solid fa-caret-down ml-2"></i>
             </a>
             <ul
               class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
             >
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="new listing"
                   >New Listings</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="featured cars"
                   >Featured Cars</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="used cars"
                   >Used Cars</a
                 >
               </li>
@@ -107,24 +130,34 @@
             <a
               href="#"
               class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+              aria-label="blog"
             >
-              Blog <i class="fa-solid fa-caret-down ml-1"></i>
+              <span>Blog</span> <i class="fa-solid fa-caret-down ml-2"></i>
             </a>
             <ul
               class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
             >
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="latest news"
                   >Latest News</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="car reviews"
                   >Car Reviews</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="industry updates"
                   >Industry Updates</a
                 >
               </li>
@@ -135,34 +168,57 @@
             <a
               href="#"
               class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+              aria-label="pages"
             >
-              Pages <i class="fa-solid fa-caret-down ml-1"></i>
+              <span>Pages</span> <i class="fa-solid fa-caret-down ml-2"></i>
             </a>
             <ul
               class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
             >
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="about us"
                   >About Us</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="our team"
                   >Our Team</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="faq"
+                  >FAQ</a
+                >
               </li>
             </ul>
           </nav>
-          <a href="#" class="px-4 py-5 text-center hover:opacity-90">About</a>
-          <a href="#" class="px-4 py-5 text-center hover:opacity-90">Contact</a>
-          <button class="px-2 hover:cursor-pointer">
+          <a
+            href="#"
+            class="px-4 py-5 text-center hover:opacity-90"
+            aria-label="about"
+            >About</a
+          >
+          <a
+            href="#"
+            class="px-4 py-5 text-center hover:opacity-90"
+            aria-label="contact"
+            >Contact</a
+          >
+          <button class="px-2 hover:cursor-pointer" aria-label="sign in">
             <i class="fas fa-user text-2xs px-2"></i>Sign in
           </button>
           <button
             class="border rounded-2xl px-4 py-2 text-bold hover:bg-[#405FF2] hover:cursor-pointer transition-all duration-300 ease-in-out"
+            aria-label="add listing"
           >
             Add Listing
           </button>
@@ -175,6 +231,7 @@
           <button
             class="text-8xl self-end px-6 hover:cursor-pointer"
             id="menu-close"
+            aria-label="close"
           >
             &times;
           </button>
@@ -186,19 +243,30 @@
               >
                 Home <i class="fa-solid fa-caret-down ml-1"></i>
               </summary>
-              <ul class="bg-slate-600 flex flex-col justify-center items-center gap-1">
+              <ul
+                class="bg-slate-600 flex flex-col justify-center items-center gap-1"
+              >
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b "
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="home style 1"
                     >Home Style 1</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="home style 2"
                     >Home Style 2</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 "
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500"
+                    aria-label="home style 3"
                     >Home Style 3</a
                   >
                 </li>
@@ -211,19 +279,30 @@
               >
                 Listing <i class="fa-solid fa-caret-down ml-1"></i>
               </summary>
-              <ul class="bg-slate-600 flex flex-col justify-center items-center gap-1 ">
+              <ul
+                class="bg-slate-600 flex flex-col justify-center items-center gap-1"
+              >
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="new listing"
                     >New Listings</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="featured cars"
                     >Featured Cars</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 "
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500"
+                    aria-label="used cars"
                     >Used Cars</a
                   >
                 </li>
@@ -236,19 +315,30 @@
               >
                 Blogs <i class="fa-solid fa-caret-down ml-1"></i>
               </summary>
-              <ul class="bg-slate-600 flex flex-col justify-center items-center gap-1">
+              <ul
+                class="bg-slate-600 flex flex-col justify-center items-center gap-1"
+              >
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="latest news"
                     >Latest News</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="car reviews"
                     >Car Reviews</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 "
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500"
+                    aria-label="industry updates"
                     >Industry Updates</a
                   >
                 </li>
@@ -261,37 +351,59 @@
               >
                 Pages <i class="fa-solid fa-caret-down ml-1"></i>
               </summary>
-              <ul class="bg-slate-600 flex flex-col justify-center items-center gap-1">
+              <ul
+                class="bg-slate-600 flex flex-col justify-center items-center gap-1"
+              >
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="about us"
                     >About us</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 border-b"
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="our team"
                     >Our Team</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-slate-500 "
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500"
+                    aria-label="faqs"
                     >FAQs</a
                   >
                 </li>
               </ul>
             </details>
             <!-- rest -->
-            <a href="#" class="w-full py-5 text-center hover:opacity-90"
+            <a
+              href="#"
+              class="w-full py-5 text-center hover:opacity-90"
+              aria-label="about"
               >About</a
             >
-            <a href="#" class="w-full py-5 text-center hover:opacity-90"
+            <a
+              href="#"
+              class="w-full py-5 text-center hover:opacity-90"
+              aria-label="contact"
               >Contact</a
             >
-            <a href="#" class="w-full py-5 text-center hover:opacity-90">
+            <a
+              href="#"
+              class="w-full py-5 text-center hover:opacity-90"
+              aria-label="sign in"
+            >
               <i class="fas fa-user text-2xs px-2"></i>Sign in
             </a>
             <a
               href="#"
               class="w-full py-5 text-center hover:opacity-90 text-bold"
+              aria-label="add listing"
               >Add Listing</a
             >
           </nav>
@@ -312,30 +424,52 @@
           <li>New</li>
           <li>Used</li>
         </ul>
-        <section
+        <form
           class="bg-white text-black flex flex-col justify-between items-center px-8 lg:px-10 py-4 lg:flex-row gap-4 m-auto lg:m-0 rounded-3xl w-full lg:w-auto"
         >
-          <button
-            class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border rounded-2xl md:border-r border-gray-300 flex justify-between items-center w-full lg:w-auto"
+          <select
+            class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border rounded-2xl md:border-r border-gray-300 w-full lg:w-auto bg-white focus:outline-none"
+            aria-label="any makes"
+            required
           >
-            <span>Any Makes</span> <i class="fa-solid fa-caret-down ml-8"></i>
-          </button>
-          <button
-            class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border md:border-r border-gray-300 rounded-2xl flex justify-between items-center w-full lg:w-auto"
+            <option disabled selected>Any Makes</option>
+            <option>Toyota</option>
+            <option>Honda</option>
+            <option>Ford</option>
+            <option>BMW</option>
+          </select>
+
+          <select
+            class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border md:border-r border-gray-300 rounded-2xl w-full lg:w-auto bg-white focus:outline-none"
+            aria-label="any models"
+            required
           >
-            <span>Any Models</span> <i class="fa-solid fa-caret-down ml-8"></i>
-          </button>
-          <button
-            class="border border-gray-300 rounded-2xl px-16 py-6 lg:py-3.5 flex justify-between items-center w-full lg:w-auto"
+            <option disabled selected>Any Models</option>
+            <option>Corolla</option>
+            <option>Civic</option>
+            <option>Mustang</option>
+            <option>X5</option>
+          </select>
+
+          <select
+            class="border border-gray-300 rounded-2xl px-16 py-6 lg:py-3.5 w-full lg:w-auto bg-white text-[#050B20] focus:outline-none"
+            aria-label="any prices"
+            required
           >
-            <span>Any Prices</span> <i class="fa-solid fa-caret-down ml-8"></i>
-          </button>
+            <option disabled selected>Any Prices</option>
+            <option>Under $20,000</option>
+            <option>$20,000 - $50,000</option>
+            <option>Over $50,000</option>
+          </select>
+
           <button
-            class="bg-[#405FF2] px-16 py-6 lg:py-3.5 rounded-2xl text-white font-medium flex justify-between items-center hover:cursor-pointer w-full lg:w-auto"
+            class="bg-[#405FF2] px-16 py-6 lg:py-3.5 rounded-2xl text-white font-medium flex justify-between items-center hover:cursor-pointer w-full lg:w-auto hover:bg-blue-500"
+            aria-label="search"
+            type="submit"
           >
             <i class="fa-solid fa-magnifying-glass mr-8"></i><span>Search</span>
           </button>
-        </section>
+        </form>
       </main>
       <!-- footer-scroller -->
       <footer
@@ -343,30 +477,50 @@
       >
         <button
           class="flex justify-around items-center cursor-pointer underline underline-offset-8"
+          aria-label="SUV"
         >
-          <img class="h-4 mr-2" src="./assets/suv.png" alt="suv" />SUV
+          <img class="h-4 mr-2" src="./assets/suv.png" alt="suv-svg" />SUV
         </button>
-        <button class="flex justify-around items-center cursor-pointer">
-          <img class="h-4 mr-2" src="./assets/seden.png" alt="sedan" />Seden
+        <button
+          class="flex justify-around items-center cursor-pointer"
+          aria-label="sedan"
+        >
+          <img class="h-4 mr-2" src="./assets/seden.png" alt="sedan-svg" />Seden
         </button>
-        <button class="flex justify-around items-center cursor-pointer">
+        <button
+          class="flex justify-around items-center cursor-pointer"
+          aria-label="hetchback"
+        >
           <img
             class="h-4 mr-2"
             src="./assets/hetchback.png"
-            alt="hetchback"
+            alt="hetchback-svg"
           />Hetchback
         </button>
-        <button class="flex justify-around items-center cursor-pointer">
-          <img class="h-4 mr-2" src="./assets/coupe.png" alt="coupe" />Coupe
+        <button
+          class="flex justify-around items-center cursor-pointer"
+          aria-label="coupe"
+        >
+          <img class="h-4 mr-2" src="./assets/coupe.png" alt="coupe-svg" />Coupe
         </button>
-        <button class="flex justify-around items-center cursor-pointer">
-          <img class="h-4 mr-2" src="./assets/hybrid.png" alt="hybrid" />Hybrid
+        <button
+          class="flex justify-around items-center cursor-pointer"
+          aria-label="hybrid"
+        >
+          <img
+            class="h-4 mr-2"
+            src="./assets/hybrid.png"
+            alt="hybrid-svg"
+          />Hybrid
         </button>
-        <button class="flex justify-around items-center cursor-pointer">
+        <button
+          class="flex justify-around items-center cursor-pointer"
+          aria-label="convertible"
+        >
           <img
             class="h-4 mr-2"
             src="./assets/coupe.png"
-            alt="Convertible"
+            alt="coupe-svg"
           />Convertible
         </button>
       </footer>
@@ -377,31 +531,26 @@
         <h1 class="font-medium text-3xl leading-10">
           The Most Searched SUV Cars
         </h1>
-        <button class="leading-4 hidden md:block">
+        <button class="leading-4 hidden md:block" aria-label="view all">
           View All <span style="font-size: 30px">&#8599;</span>
         </button>
       </article>
       <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- card -->
         <article
-          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group z-10"
+          class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
             <img
               src="./assets/toyota.png"
-              alt="toyota"
+              alt="toyota-image"
               class="h-full transition-transform duration-300 group-hover:scale-110"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
-            <p
-              class="bg-[#3D923A] text-white text-sm px-4 py-1 absolute top-5 left-4 rounded-3xl"
-            >
-              Great Price
-            </p>
           </figure>
           <header
             class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
@@ -419,15 +568,15 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
-              <span>20 Miles</span>
+              <span>15 Miles</span>
             </section>
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -435,13 +584,13 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
-              /><span>Automatic</span>
+              /><span>CVT</span>
             </section>
           </main>
           <footer class="flex justify-between mx-6 py-3">
-            <p class="font-bold text-lg leading-7.5">$45,000</p>
+            <p class="font-bold text-lg leading-7.5">$40,000</p>
             <p
               class="font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer"
             >
@@ -457,12 +606,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/Tcross.png"
-              alt="tCross"
+              alt="tCross-image"
               class="h-full transition-transform duration-300 group-hover:scale-110"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
           </figure>
@@ -482,7 +631,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>15 Miles</span>
@@ -490,7 +639,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -498,7 +647,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>CVT</span>
             </section>
@@ -519,12 +668,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/cClass.png"
-              alt="c-class"
+              alt="c-class-image"
               class="h-full transition-transform duration-300 group-hover:scale-110"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
           </figure>
@@ -544,7 +693,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>50 Miles</span>
@@ -552,7 +701,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -560,7 +709,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>Automatic</span>
             </section>
@@ -581,12 +730,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/fordTranssit.png"
-              alt="Ford"
+              alt="Ford-image"
               class="h-full transition-transform duration-300 group-hover:scale-110"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
             <p
@@ -611,7 +760,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>250 Miles</span>
@@ -619,7 +768,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Diesel</span>
@@ -627,7 +776,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>Manual</span>
             </section>
@@ -648,12 +797,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/newGLC.png"
-              alt="newGLC"
+              alt="newGLC-image"
               class="h-full transition-transform duration-300 group-hover:scale-110"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
             <p
@@ -678,7 +827,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles.png"
-                alt="miles"
+                alt="miles-image"
                 class="h-5 w-5 object-contain"
               />
               <span>50 Miles</span>
@@ -686,7 +835,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer.png"
-                alt="petrol"
+                alt="petrol-icon"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -694,7 +843,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>Automatic</span>
             </section>
@@ -715,12 +864,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/audiA6.png"
-              alt="audi"
+              alt="audi-image"
               class="h-full transition-transform duration-300 group-hover:scale-110"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
           </figure>
@@ -740,7 +889,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>100 Miles</span>
@@ -748,7 +897,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -756,7 +905,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>Automatic</span>
             </section>
@@ -777,12 +926,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/corolla-atlis.png"
-              alt="corollaAtis"
+              alt="corollaAtis-image"
               class="h-full transition-transform duration-300 group-hover:scale-110"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
           </figure>
@@ -802,7 +951,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>1500 Miles</span>
@@ -810,7 +959,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -818,7 +967,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>CVT</span>
             </section>
@@ -839,12 +988,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/FordExplorer.png"
-              alt="ford"
+              alt="Ford-image"
               class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
             <p
@@ -885,7 +1034,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>CVT</span>
             </section>
@@ -919,6 +1068,7 @@
           <button
             href="#"
             class="bg-blue-600 text-white px-7 py-5 rounded-2xl hover:bg-blue-700 inline-flex items-center hover:cursor-pointer"
+            aria-label="Get Started"
           >
             Get Started
             <svg
@@ -937,7 +1087,7 @@
             </svg>
           </button>
           <figure class="w-28 h-28 hidden md:block">
-            <img src="./assets/buy-car.png" alt="buy-car" />
+            <img src="./assets/buy-car.png" alt="buy-car-svg" />
           </figure>
         </footer>
       </article>
@@ -956,6 +1106,7 @@
           <button
             href="#"
             class="bg-gray-900 text-white px-7 py-5 rounded-2xl hover:bg-gray-800 inline-flex items-center hover:cursor-pointer"
+            aria-label="Get Started"
           >
             Get Started
             <svg
@@ -974,7 +1125,7 @@
             </svg>
           </button>
           <figure class="w-28 h-28 hidden md:block">
-            <img src="./assets/sell-car.png" alt="sell-car" />
+            <img src="./assets/sell-car.png" alt="sell-car-svg" />
           </figure>
         </footer>
       </article>
@@ -991,7 +1142,7 @@
         <!-- Special Financing Offers -->
         <article class="flex flex-col gap-4">
           <figure class="w-12 h-12">
-            <img src="./assets/fin-offer.png" alt="fin-offer" />
+            <img src="./assets/fin-offer.png" alt="final-offer-img" />
           </figure>
           <h3 class="text-xl font-semibold text-gray-900">
             Special Financing Offers
@@ -1006,7 +1157,7 @@
         <article class="flex flex-col gap-4">
           <div class="w-12 h-12">
             <figure class="w-12 h-12">
-              <img src="./assets/car-dealership.png" alt="fin-offer" />
+              <img src="./assets/car-dealership.png" alt="final-offer-img" />
             </figure>
           </div>
           <h3 class="text-xl font-semibold text-gray-900">
@@ -1051,7 +1202,7 @@
     <section class="bg-[#050b20] text-white w-full">
       <article class="flex justify-between items-center px-10 pt-20 mb-6">
         <h1 class="font-medium text-3xl leading-10">Popular Makes</h1>
-        <button class="leading-4 hidden md:block">
+        <button class="leading-4 hidden md:block" aria-label="view all">
           View All <span style="font-size: 30px">&#8599;</span>
         </button>
       </article>
@@ -1073,12 +1224,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/Tcross.png"
-              alt="tCross"
+              alt="tCross-image"
               class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
           </figure>
@@ -1098,7 +1249,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles-white.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>15 Miles</span>
@@ -1106,7 +1257,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer-white.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -1114,7 +1265,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic-white.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>CVT</span>
             </section>
@@ -1135,12 +1286,12 @@
           <figure class="overflow-hidden relative">
             <img
               src="./assets/cClass.png"
-              alt="c-class"
+              alt="c-class-image"
               class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
             />
             <img
               src="./assets/bookmark.png"
-              alt="bookmark"
+              alt="bookmark-icon"
               class="absolute top-5 right-4 h-9 w-9"
             />
           </figure>
@@ -1160,7 +1311,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles-white.png"
-                alt="miles"
+                alt="miles-image"
                 class="h-5 w-5 object-contain"
               />
               <span>50 Miles</span>
@@ -1168,7 +1319,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer-white.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -1176,7 +1327,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic-white.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>Automatic</span>
             </section>
@@ -1196,8 +1347,8 @@
         >
           <figure class="overflow-hidden relative">
             <img
-              src="./assets/fordTranssit.png"
-              alt="Ford"
+              src="./assets/audiA6.png"
+              alt="newGLC"
               class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
             />
             <img
@@ -1205,11 +1356,6 @@
               alt="bookmark"
               class="absolute top-5 right-4 h-9 w-9"
             />
-            <p
-              class="bg-[#3D923A] text-white text-sm px-4 py-1 absolute top-5 left-4 rounded-3xl"
-            >
-              Great Price
-            </p>
           </figure>
           <header
             class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
@@ -1217,7 +1363,7 @@
             <h1
               class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
             >
-              Ford Transit-2021
+              Audi A6 3.5 - New
             </h1>
             <p class="text-sm leading-3.5">
               4.0 D5 PowerPulse Momentum 5dr AW…
@@ -1227,29 +1373,29 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles-white.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
-              <span>250 Miles</span>
+              <span>50 Miles</span>
             </section>
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer-white.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
-              <span>Diesel</span>
+              <span>Petrol</span>
             </section>
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic-white.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
-              /><span>Manual</span>
+              /><span>Automatic</span>
             </section>
           </main>
           <footer class="flex justify-between mx-6 py-3">
-            <p class="font-bold text-lg leading-7.5">$22,000</p>
+            <p class="font-bold text-lg leading-7.5">$55,000</p>
             <p
               class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
             >
@@ -1294,7 +1440,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/miles-white.png"
-                alt="miles"
+                alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>50 Miles</span>
@@ -1302,7 +1448,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/kilometer-white.png"
-                alt="petrol"
+                alt="petrol-svg"
                 class="h-5 w-5 object-contain"
               />
               <span>Petrol</span>
@@ -1310,7 +1456,7 @@
             <section class="flex flex-col justify-center items-center gap-1">
               <img
                 src="./assets/automatic-white.png"
-                alt="automatic"
+                alt="automatic-svg"
                 class="h-5 w-5 object-contain"
               /><span>Automatic</span>
             </section>
@@ -1328,6 +1474,7 @@
       <section class="hidden md:flex gap-6 px-10 py-10">
         <button
           class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:cursor-pointer"
+          aria-label="previous"
         >
           <svg
             class="w-6 h-6"
@@ -1345,6 +1492,7 @@
         </button>
         <button
           class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:cursor-pointer"
+          aria-label="next"
         >
           <svg
             class="w-6 h-6"
@@ -1373,6 +1521,7 @@
         <section class="flex gap-4">
           <button
             class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50"
+            aria-label="previous"
           >
             <svg
               class="w-6 h-6"
@@ -1390,6 +1539,7 @@
           </button>
           <button
             class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50"
+            aria-label="next"
           >
             <svg
               class="w-6 h-6"
@@ -1449,17 +1599,17 @@
           <figure class="flex gap-4 mt-4 items-center">
             <img
               src="/assets/profile-1.jpg"
-              alt="Profile 1"
+              alt="Profile 1 photo"
               class="w-12 h-12 rounded-full border-2 border-blue-400 p-0.5"
             />
             <img
               src="/assets/profile-2.png"
-              alt="Profile 2"
+              alt="Profile 2 photo"
               class="w-10 h-10 rounded-full"
             />
             <img
               src="/assets/profile-3.png"
-              alt="Profile 3"
+              alt="Profile 3 photo"
               class="w-10 h-10 rounded-full"
             />
           </figure>
@@ -1472,7 +1622,7 @@
         <h1 class="font-medium text-3xl leading-10">
           Explore Our Premium Brands
         </h1>
-        <button class="leading-4 hidden md:block">
+        <button class="leading-4 hidden md:block" aria-label="view all">
           Show All Brands <span style="font-size: 20px">&#8599;</span>
         </button>
       </article>
@@ -1482,7 +1632,7 @@
         >
           <img
             src="./assets/audi-logo.png"
-            alt="audi"
+            alt="audi-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
           <p class="text-sm min-w-xs md:min-w-auto text-center">Audi</p>
@@ -1492,7 +1642,7 @@
         >
           <img
             src="./assets/BMW-logo.png"
-            alt="bmw"
+            alt="bmw-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
           <p class="text-sm min-w-xs md:min-w-auto text-center">BMW</p>
@@ -1502,7 +1652,7 @@
         >
           <img
             src="./assets/ford-logo.png"
-            alt="Ford"
+            alt="Ford-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
           <p class="text-sm min-w-xs md:min-w-auto text-center">Ford</p>
@@ -1512,7 +1662,7 @@
         >
           <img
             src="./assets/medrcedes-logo.png"
-            alt="Mercedes"
+            alt="medrcedes-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
           <p class="text-sm min-w-xs md:min-w-auto text-center">
@@ -1524,7 +1674,7 @@
         >
           <img
             src="./assets/peugeot-logo.png"
-            alt="peugeot"
+            alt="peugeot-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
           <p class="text-sm min-w-xs md:min-w-auto text-center">Peugeot</p>
@@ -1534,7 +1684,7 @@
         >
           <img
             src="./assets/Volkswagen-logo.png"
-            alt="Volkswagen"
+            alt="Volkswagen-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
           <p class="text-sm min-w-xs md:min-w-auto text-center">Volkswagen</p>
@@ -1566,6 +1716,7 @@
         <button
           href="#"
           class="bg-blue-700 text-white px-6 py-4 rounded-lg hover:bg-blue-800 inline-flex items-center hover:cursor-pointer"
+          aria-label="Find Out More"
         >
           Find Out More
           <svg
@@ -1611,14 +1762,14 @@
       <!-- heading -->
       <article class="flex justify-between items-center mb-6">
         <h1 class="font-medium text-3xl leading-10">Latest Blog Posts</h1>
-        <button class="leading-4 hidden md:block">
+        <button class="leading-4 hidden md:block" aria-label="view all">
           View All <span style="font-size: 20px">&#8599;</span>
         </button>
       </article>
       <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <!-- blog-1 -->
         <section class="group">
-          <figure class="overflow-hidden rounded-2xl">
+          <figure class="overflow-hidden rounded-2xl hover:opacity-80">
             <img src="./assets/blog-car-1.png" alt="car-img" />
           </figure>
           <article>
@@ -1626,14 +1777,14 @@
               <span class="text-sm leading-6">Admin</span> &middot;
               <span class="text-sm leading-6">November 22, 2023</span>
             </p>
-            <p class="text-xl leading-7">
+            <p class="text-xl leading-7 hover:underline">
               2024 BMW ALPINA XB7 with exclusive details, extraordinary
             </p>
           </article>
         </section>
         <!-- blog-2 -->
         <section class="group">
-          <figure class="overflow-hidden rounded-2xl">
+          <figure class="overflow-hidden rounded-2xl hover:opacity-80">
             <img src="./assets/blog-car-2.png" alt="car-img" />
           </figure>
           <article>
@@ -1641,14 +1792,14 @@
               <span class="text-sm leading-6">Admin</span> &middot;
               <span class="text-sm leading-6">November 22, 2023</span>
             </p>
-            <p class="text-xl leading-7">
+            <p class="text-xl leading-7 hover:underline">
               BMW X6 M50i is designed to exceed your sportiest.
             </p>
           </article>
         </section>
         <!-- blog-3 -->
         <section class="group">
-          <figure class="overflow-hidden rounded-2xl">
+          <figure class="overflow-hidden rounded-2xl hover:opacity-80">
             <img src="./assets/blog-car-3.png" alt="car-img" />
           </figure>
           <article>
@@ -1656,7 +1807,7 @@
               <span class="text-sm leading-6">Admin</span> &middot;
               <span class="text-sm leading-6">November 22, 2023</span>
             </p>
-            <p class="text-xl leading-7">
+            <p class="text-xl leading-7 hover:underline">
               BMW X5 Gold 2024 Sport Review: Light on Sport
             </p>
           </article>
@@ -1671,10 +1822,11 @@
         Have a Questions? Feel Free To Ask...
       </p>
       <figure class="flex gap-2">
-        <img src="./assets/phone.png" alt="" class="h-8" /><span
-          class="font-medium text-2xl leading-7"
-          >+91 884272842</span
-        >
+        <img
+          src="./assets/phone.png"
+          alt="mobile-phone image"
+          class="h-8"
+        /><span class="font-medium text-2xl leading-7">+91 884272842</span>
       </figure>
     </section>
     <!-- Footer -->
@@ -1690,14 +1842,17 @@
           </p>
         </section>
         <form class="flex gap-4 w-full m-auto md:m-0 md:w-3/4 lg:w-xl relative">
+          <!-- <label for="email">Email: </label> -->
           <input
             type="email"
             placeholder="Your email address"
             class="flex-grow px-5 py-4.5 rounded-4xl bg-gray-800 border border-gray-700 text-white w-full"
+            required
           />
           <button
             type="submit"
-            class="px-7 py-2 bg-blue-600 hover:bg-blue-700 rounded-3xl font-medium absolute top-2.5 right-3"
+            class="px-7 py-2 bg-blue-600 hover:bg-blue-700 rounded-3xl font-medium absolute top-2.5 right-3 hover:cursor-pointer"
+            aria-label="Sign Up"
           >
             Sign Up
           </button>
@@ -1711,47 +1866,138 @@
         <!-- Company Links -->
         <nav class="flex flex-col gap-4">
           <h3 class="font-semibold mb-2">Company</h3>
-          <a href="#" class="text-gray-400 hover:text-white">About Us</a>
-          <a href="#" class="text-gray-400 hover:text-white">Blog</a>
-          <a href="#" class="text-gray-400 hover:text-white">Services</a>
-          <a href="#" class="text-gray-400 hover:text-white">FAQs</a>
-          <a href="#" class="text-gray-400 hover:text-white">Terms</a>
-          <a href="#" class="text-gray-400 hover:text-white">Contact Us</a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="about us"
+            >About Us</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="blog"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="services"
+            >Services</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="faqs"
+            >FAQs</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="terms"
+            >Terms</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="contact us"
+            >Contact Us</a
+          >
         </nav>
 
         <!-- Quick Links -->
         <nav class="flex flex-col gap-4">
           <h3 class="font-semibold mb-2">Quick Links</h3>
-          <a href="#" class="text-gray-400 hover:text-white">Get in Touch</a>
-          <a href="#" class="text-gray-400 hover:text-white">Help Center</a>
-          <a href="#" class="text-gray-400 hover:text-white">Live Chat</a>
-          <a href="#" class="text-gray-400 hover:text-white">How it works</a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="get in touch"
+            >Get in Touch</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="help center"
+            >Help Center</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="live chat"
+            >Live Chat</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="how it works"
+            >How it works</a
+          >
         </nav>
 
         <!-- Our Brands -->
         <nav class="flex flex-col gap-4">
           <h3 class="font-semibold mb-2">Our Brands</h3>
-          <a href="#" class="text-gray-400 hover:text-white">Toyota</a>
-          <a href="#" class="text-gray-400 hover:text-white">Porsche</a>
-          <a href="#" class="text-gray-400 hover:text-white">Audi</a>
-          <a href="#" class="text-gray-400 hover:text-white">BMW</a>
-          <a href="#" class="text-gray-400 hover:text-white">Ford</a>
-          <a href="#" class="text-gray-400 hover:text-white">Nissan</a>
-          <a href="#" class="text-gray-400 hover:text-white">Peugeot</a>
-          <a href="#" class="text-gray-400 hover:text-white">Volkswagen</a>
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="toyota"
+            >Toyota</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="porsche"
+            >Porsche</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="audi"
+            >Audi</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="bmw"
+            >BMW</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="ford"
+            >Ford</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="nissan"
+            >Nissan</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="peugeot"
+            >Peugeot</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="volkswagen"
+            >Volkswagen</a
+          >
         </nav>
 
         <!-- Vehicles Type -->
         <nav class="flex flex-col gap-4">
           <h3 class="font-semibold mb-2">Vehicles Type</h3>
-          <a href="#" class="text-gray-400 hover:text-white">Sedan</a>
-          <a href="#" class="text-gray-400 hover:text-white">Hatchback</a>
-          <a href="#" class="text-gray-400 hover:text-white">SUV</a>
-          <a href="#" class="text-gray-400 hover:text-white">Hybrid</a>
-          <a href="#" class="text-gray-400 hover:text-white">Electric</a>
-          <a href="#" class="text-gray-400 hover:text-white">Coupe</a>
-          <a href="#" class="text-gray-400 hover:text-white">Truck</a>
-          <a href="#" class="text-gray-400 hover:text-white">Convertible</a>
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="sedan"
+            >Sedan</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="hatchback"
+            >Hatchback</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="suv"
+            >SUV</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="hybrid"
+            >Hybrid</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="electric"
+            >Electric</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="coupe"
+            >Coupe</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="truck"
+            >Truck</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="convertible"
+            >Convertible</a
+          >
         </nav>
 
         <!-- Mobile App Section -->
@@ -1760,6 +2006,7 @@
           <a
             href="#"
             class="flex items-center gap-2 text-gray-400 hover:text-white bg-[#161c30] rounded-2xl py-2 px-4"
+            aria-label="apple store"
           >
             <i class="fa-brands fa-apple text-2xl"></i>
             <span>Download on the<br /><strong>Apple Store</strong></span>
@@ -1767,6 +2014,7 @@
           <a
             href="#"
             class="flex items-center gap-2 text-gray-400 hover:text-white bg-[#161c30] rounded-2xl py-2 px-4"
+            aria-label="google play"
           >
             <i class="fa-brands fa-google-play text-2xl"></i>
             <span>Get it on<br /><strong>Google Play</strong></span>
@@ -1774,16 +2022,32 @@
 
           <h3 class="font-semibold mt-4 mb-2">Connect With Us</h3>
           <section class="flex gap-4">
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white"
+              aria-label="facebook"
+            >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white"
+              aria-label="twitter"
+            >
               <i class="fa-brands fa-twitter"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white"
+              aria-label="instagram"
+            >
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white"
+              aria-label="linkedin"
+            >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
           </section>
@@ -1798,14 +2062,25 @@
           &copy; 2023 Boxcars.com. All rights reserved.
         </p>
         <section class="flex gap-4 text-sm text-gray-400">
-          <a href="#" class="hover:text-white">Terms & Conditions</a>
+          <a href="#" class="hover:text-white" aria-label="terms & Conditions"
+            >Terms & Conditions</a
+          >
           <span>&bull;</span>
-          <a href="#" class="hover:text-white">Privacy Notice</a>
+          <a href="#" class="hover:text-white" aria-label="privacy notice"
+            >Privacy Notice</a
+          >
         </section>
-        <button class="bg-[#405FF2] h-8 w-8 rounded-full hover:cursor-pointer">
-          <a href="#top"
-            ><i class="fa-solid fa-angle-up text-white text-xl"></i
-          ></a>
+        <button
+          class="bg-[#405FF2] rounded-full hover:cursor-pointer h-12 w-12 flex items-center justify-center"
+        >
+          <span class="sr-only">Back to Top</span>
+          <a
+            href="#top"
+            aria-label="Back to Top"
+            class="h-12 w-12 p-2 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#405FF2] flex justify-center items-center"
+          >
+            <i class="fa-solid fa-arrow-up text-2xl text-white"></i>
+          </a>
         </button>
       </footer>
     </footer>
