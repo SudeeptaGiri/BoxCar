@@ -23,7 +23,8 @@
   <body class="font-dm-sans overflow-x-hidden">
     <!-- Header -->
     <header
-      class="min-h-screen w-screen flex flex-col justify-between px-10 bg-[url(./assets/image-1.jpg)] bg-cover bg-center bg-no-repeat text-white"
+      class="min-h-screen w-screen flex flex-col justify-between px-10 bg-cover bg-center bg-no-repeat text-white"
+      style="background-image: url(./assets/image-1.jpg)"
       id="top"
     >
       <!-- Nav Bar -->
@@ -411,61 +412,75 @@
       </nav>
       <!-- Hero Section -->
       <main class="flex flex-col items-start gap-5 my-5">
-        <p class="text-base font-normal leading-7">
+        <p class="text-base font-normal leading-7" id="header-para">
           Shop Online. Pickup Today. It's Fast, Simple and Easy. Learn More.
         </p>
         <h1
           class="font-dm text-5xl font-bold leading-16 tracking-[0%] mt-0 mb-7"
+          id="header-heading"
         >
           Fast, Simple and Easy
         </h1>
         <ul class="flex self-start gap-5 font-medium mb-3">
-          <li class="underline underline-offset-8">All</li>
-          <li>New</li>
-          <li>Used</li>
+          <li class="underline underline-offset-8 hover:cursor-pointer">All</li>
+          <li class="hover:cursor-pointer">New</li>
+          <li class="hover:cursor-pointer">Used</li>
         </ul>
         <form
           class="bg-white text-black flex flex-col justify-between items-center px-8 lg:px-10 py-4 lg:flex-row gap-4 m-auto lg:m-0 rounded-3xl w-full lg:w-auto"
+          id="search-form"
         >
+          <!-- Makes Dropdown -->
           <select
             class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border rounded-2xl md:border-r border-gray-300 w-full lg:w-auto bg-white focus:outline-none"
             aria-label="any makes"
             required
+            id="any-makes"
           >
-            <option disabled selected>Any Makes</option>
+            <option>Any Makes</option>
             <option>Toyota</option>
-            <option>Honda</option>
             <option>Ford</option>
-            <option>BMW</option>
+            <option>Audi</option>
           </select>
 
+          <!-- Models Dropdown -->
           <select
             class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border md:border-r border-gray-300 rounded-2xl w-full lg:w-auto bg-white focus:outline-none"
             aria-label="any models"
             required
+            id="any-models"
           >
-            <option disabled selected>Any Models</option>
-            <option>Corolla</option>
-            <option>Civic</option>
-            <option>Mustang</option>
-            <option>X5</option>
+            <option>Any Models</option>
+            <option>Camry</option>
+            <option>T-Cross</option>
+            <option>C-Class</option>
+            <option>Transit</option>
+            <option>GLC</option>
+            <option>A6</option>
+            <option>Corolla Altis</option>
+            <option>Explorer</option>
           </select>
 
+          <!-- Prices Dropdown -->
           <select
             class="border border-gray-300 rounded-2xl px-16 py-6 lg:py-3.5 w-full lg:w-auto bg-white text-[#050B20] focus:outline-none"
             aria-label="any prices"
             required
+            id="any-prices"
           >
-            <option disabled selected>Any Prices</option>
+            <option>Any Prices</option>
             <option>Under $20,000</option>
             <option>$20,000 - $50,000</option>
-            <option>Over $50,000</option>
+            <option>$50,000 - $100,000</option>
+            <option>Over $100,000</option>
           </select>
 
+          <!-- Search Button -->
           <button
             class="bg-[#405FF2] px-16 py-6 lg:py-3.5 rounded-2xl text-white font-medium flex justify-between items-center hover:cursor-pointer w-full lg:w-auto hover:bg-blue-500"
             aria-label="search"
             type="submit"
+            id="search-btn"
           >
             <i class="fa-solid fa-magnifying-glass mr-8"></i><span>Search</span>
           </button>
@@ -473,22 +488,22 @@
       </main>
       <!-- footer-scroller -->
       <footer
-        class="flex justify-start items-center gap-20 overflow-x-scroll md:overflow-hidden py-6"
+        class="flex justify-start items-center gap-20 overflow-x-scroll md:overflow-hidden"
       >
         <button
-          class="flex justify-around items-center cursor-pointer underline underline-offset-8"
+          class="flex justify-around items-center cursor-pointer car-type bg-black text-white px-7 py-5 rounded-3xl"
           aria-label="SUV"
         >
           <img class="h-4 mr-2" src="./assets/suv.png" alt="suv-svg" />SUV
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer"
+          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
           aria-label="sedan"
         >
           <img class="h-4 mr-2" src="./assets/seden.png" alt="sedan-svg" />Seden
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer"
+          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
           aria-label="hetchback"
         >
           <img
@@ -498,13 +513,13 @@
           />Hetchback
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer"
+          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
           aria-label="coupe"
         >
           <img class="h-4 mr-2" src="./assets/coupe.png" alt="coupe-svg" />Coupe
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer"
+          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
           aria-label="hybrid"
         >
           <img
@@ -514,7 +529,7 @@
           />Hybrid
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer"
+          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
           aria-label="convertible"
         >
           <img
@@ -525,19 +540,21 @@
         </button>
       </footer>
     </header>
+    <aside></aside>
+
     <!-- Top Selling Cars -->
     <main class="px-10 text-black">
       <article class="flex justify-between items-center pt-10 mb-6">
         <h1 class="font-medium text-3xl leading-10">
-          The Most Searched SUV Cars
+          The Most Searched <span id="top-selling-car-name">SUV</span> Cars
         </h1>
         <button class="leading-4 hidden md:block" aria-label="view all">
           View All <span style="font-size: 30px">&#8599;</span>
         </button>
       </article>
-      <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="top-selling-cars">
         <!-- card -->
-        <article
+        <!-- <article
           class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
@@ -597,10 +614,10 @@
               View Details &#8599;
             </p>
           </footer>
-        </article>
+        </article> -->
         <!-- populating cards -->
         <!-- card 2-->
-        <article
+        <!-- <article
           class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
@@ -660,9 +677,9 @@
               View Details &#8599;
             </p>
           </footer>
-        </article>
+        </article> -->
         <!-- card-3 -->
-        <article
+        <!-- <article
           class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
@@ -722,9 +739,9 @@
               View Details &#8599;
             </p>
           </footer>
-        </article>
+        </article> -->
         <!-- card-4 -->
-        <article
+        <!-- <article
           class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
@@ -789,9 +806,9 @@
               View Details &#8599;
             </p>
           </footer>
-        </article>
+        </article> -->
         <!-- card-5 -->
-        <article
+        <!-- <article
           class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
@@ -856,9 +873,9 @@
               View Details &#8599;
             </p>
           </footer>
-        </article>
+        </article> -->
         <!-- card-6 -->
-        <article
+        <!-- <article
           class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
@@ -918,9 +935,9 @@
               View Details &#8599;
             </p>
           </footer>
-        </article>
+        </article> -->
         <!-- card-7 -->
-        <article
+        <!-- <article
           class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
@@ -980,9 +997,9 @@
               View Details &#8599;
             </p>
           </footer>
-        </article>
+        </article> -->
         <!-- card-8 -->
-        <article
+        <!-- <article
           class="border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group"
         >
           <figure class="overflow-hidden relative">
@@ -1047,9 +1064,63 @@
               View Details &#8599;
             </p>
           </footer>
-        </article>
+        </article> -->
       </main>
     </main>
+    <!-- Popup Window -->
+    <div
+      id="popup"
+      class="hidden fixed inset-0 bg-transparent backdrop-blur-sm bg-opacity-50 justify-center items-center z-50"
+    >
+      <div class="bg-white p-6 rounded-2xl shadow-xl relative w-11/12 max-w-lg">
+        <!-- Close Button -->
+        <button
+          id="closePopup"
+          class="absolute top-3 right-3 text-gray-900 text-5xl font-bold hover:cursor-pointer"
+        >
+          &times;
+        </button>
+
+        <!-- Popup Content -->
+        <figure class="overflow-hidden">
+          <img
+            id="popupImage"
+            src=""
+            alt="Car Image"
+            class="w-full rounded-xl"
+          />
+        </figure>
+        <header class="py-4 border-b">
+          <h1 id="popupTitle" class="text-xl font-semibold"></h1>
+          <p id="popupDesc" class="text-gray-600 text-sm"></p>
+        </header>
+        <main class="flex justify-between py-4 border-b">
+          <section class="flex flex-col items-center gap-1">
+            <img src="./assets/miles.png" alt="miles" class="h-5 w-5" />
+            <span id="popupMiles"></span>
+          </section>
+          <section class="flex flex-col items-center gap-1">
+            <img src="./assets/kilometer.png" alt="fuel" class="h-5 w-5" />
+            <span id="popupFuel"></span>
+          </section>
+          <section class="flex flex-col items-center gap-1">
+            <img
+              src="./assets/automatic.png"
+              alt="transmission"
+              class="h-5 w-5"
+            />
+            <span id="popupTransmission"></span>
+          </section>
+        </main>
+        <footer class="py-4 flex justify-between">
+          <p id="popupPrice" class="font-bold text-lg"></p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+            Buy Now
+          </button>
+        </footer>
+      </div>
+    </div>
+
     <!-- Buy Car & Sell Car -->
     <section
       class="mx-auto px-10 py-12 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -1217,7 +1288,11 @@
         </ul>
       </nav>
       <!-- cards -->
-      <main class="flex gap-5 overflow-x-scroll lg:overflow-hidden mx-10 py-10">
+      <main
+        class="flex gap-7 overflow-auto scrollbar-hidden mx-10 py-8"
+        id="popular-makes"
+      >
+      <!--
         <article
           class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
         >
@@ -1279,7 +1354,7 @@
             </p>
           </footer>
         </article>
-        <!-- card-3 -->
+
         <article
           class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
         >
@@ -1341,7 +1416,7 @@
             </p>
           </footer>
         </article>
-        <!-- card-4 -->
+
         <article
           class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
         >
@@ -1403,7 +1478,7 @@
             </p>
           </footer>
         </article>
-        <!-- card-5 -->
+
         <article
           class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
         >
@@ -1470,11 +1545,198 @@
             </p>
           </footer>
         </article>
+
+        <article
+        class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
+      >
+        <figure class="overflow-hidden relative">
+          <img
+            src="./assets/cClass.png"
+            alt="c-class-image"
+            class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
+          />
+          <img
+            src="./assets/bookmark.png"
+            alt="bookmark-icon"
+            class="absolute top-5 right-4 h-9 w-9"
+          />
+        </figure>
+        <header
+          class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+        >
+          <h1
+            class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+          >
+            C-Class-2023
+          </h1>
+          <p class="text-sm leading-3.5">
+            4.0 D5 PowerPulse Momentum 5dr AW…
+          </p>
+        </header>
+        <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+          <section class="flex flex-col justify-center items-center gap-1">
+            <img
+              src="./assets/miles-white.png"
+              alt="miles-image"
+              class="h-5 w-5 object-contain"
+            />
+            <span>50 Miles</span>
+          </section>
+          <section class="flex flex-col justify-center items-center gap-1">
+            <img
+              src="./assets/kilometer-white.png"
+              alt="petrol-svg"
+              class="h-5 w-5 object-contain"
+            />
+            <span>Petrol</span>
+          </section>
+          <section class="flex flex-col justify-center items-center gap-1">
+            <img
+              src="./assets/automatic-white.png"
+              alt="automatic-svg"
+              class="h-5 w-5 object-contain"
+            /><span>Automatic</span>
+          </section>
+        </main>
+        <footer class="flex justify-between mx-6 py-3">
+          <p class="font-bold text-lg leading-7.5">$150,000</p>
+          <p
+            class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
+          >
+            View Details &#8599;
+          </p>
+        </footer>
+      </article>
+
+      <article
+      class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
+    >
+      <figure class="overflow-hidden relative">
+        <img
+          src="./assets/cClass.png"
+          alt="c-class-image"
+          class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
+        />
+        <img
+          src="./assets/bookmark.png"
+          alt="bookmark-icon"
+          class="absolute top-5 right-4 h-9 w-9"
+        />
+      </figure>
+      <header
+        class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+      >
+        <h1
+          class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+        >
+          C-Class-2023
+        </h1>
+        <p class="text-sm leading-3.5">
+          4.0 D5 PowerPulse Momentum 5dr AW…
+        </p>
+      </header>
+      <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+        <section class="flex flex-col justify-center items-center gap-1">
+          <img
+            src="./assets/miles-white.png"
+            alt="miles-image"
+            class="h-5 w-5 object-contain"
+          />
+          <span>50 Miles</span>
+        </section>
+        <section class="flex flex-col justify-center items-center gap-1">
+          <img
+            src="./assets/kilometer-white.png"
+            alt="petrol-svg"
+            class="h-5 w-5 object-contain"
+          />
+          <span>Petrol</span>
+        </section>
+        <section class="flex flex-col justify-center items-center gap-1">
+          <img
+            src="./assets/automatic-white.png"
+            alt="automatic-svg"
+            class="h-5 w-5 object-contain"
+          /><span>Automatic</span>
+        </section>
       </main>
-      <section class="hidden md:flex gap-6 px-10 py-10">
+      <footer class="flex justify-between mx-6 py-3">
+        <p class="font-bold text-lg leading-7.5">$150,000</p>
+        <p
+          class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
+        >
+          View Details &#8599;
+        </p>
+      </footer>
+    </article>
+
+    <article
+    class="bg-[#161c30] rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group min-w-3xs"
+  >
+    <figure class="overflow-hidden relative">
+      <img
+        src="./assets/cClass.png"
+        alt="c-class-image"
+        class="h-full transition-transform duration-300 group-hover:scale-110 grpu"
+      />
+      <img
+        src="./assets/bookmark.png"
+        alt="bookmark-icon"
+        class="absolute top-5 right-4 h-9 w-9"
+      />
+    </figure>
+    <header
+      class="flex flex-col gap-2 mx-6 border-b border-gray-300 py-3"
+    >
+      <h1
+        class="font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3"
+      >
+        C-Class-2023
+      </h1>
+      <p class="text-sm leading-3.5">
+        4.0 D5 PowerPulse Momentum 5dr AW…
+      </p>
+    </header>
+    <main class="flex justify-between mx-6 border-b border-gray-300 py-3">
+      <section class="flex flex-col justify-center items-center gap-1">
+        <img
+          src="./assets/miles-white.png"
+          alt="miles-image"
+          class="h-5 w-5 object-contain"
+        />
+        <span>50 Miles</span>
+      </section>
+      <section class="flex flex-col justify-center items-center gap-1">
+        <img
+          src="./assets/kilometer-white.png"
+          alt="petrol-svg"
+          class="h-5 w-5 object-contain"
+        />
+        <span>Petrol</span>
+      </section>
+      <section class="flex flex-col justify-center items-center gap-1">
+        <img
+          src="./assets/automatic-white.png"
+          alt="automatic-svg"
+          class="h-5 w-5 object-contain"
+        /><span>Automatic</span>
+      </section>
+    </main>
+    <footer class="flex justify-between mx-6 py-3">
+      <p class="font-bold text-lg leading-7.5">$150,000</p>
+      <p
+        class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
+      >
+        View Details &#8599;
+      </p>
+    </footer>
+  </article> -->
+      </main>
+      <section class="flex gap-6 px-10 py-10">
         <button
           class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:cursor-pointer"
           aria-label="previous"
+          id="left-scroll"
         >
           <svg
             class="w-6 h-6"
@@ -1492,6 +1754,7 @@
         </button>
         <button
           class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:cursor-pointer"
+          id="right-scroll"
           aria-label="next"
         >
           <svg
@@ -1520,8 +1783,9 @@
         </h2>
         <section class="flex gap-4">
           <button
-            class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50"
+            class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50 hover:cursor-pointer"
             aria-label="previous"
+            id="previous-comment"
           >
             <svg
               class="w-6 h-6"
@@ -1538,8 +1802,9 @@
             </svg>
           </button>
           <button
-            class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50"
+            class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50 hover:cursor-pointer"
             aria-label="next"
+            id="next-comment"
           >
             <svg
               class="w-6 h-6"
@@ -1589,14 +1854,14 @@
             <span class="text-sm text-gray-500">Verified</span>
           </section>
           <article class="mb-4 py-4">
-            <h3 class="font-semibold">Ali TUFAN</h3>
-            <p class="text-sm text-gray-500">Designer</p>
+            <h3 class="font-semibold" id="name">Ali TUFAN</h3>
+            <p class="text-sm text-gray-500" id="profession">Designer</p>
           </article>
-          <p class="text-gray-800 text-xl font-medium">
+          <p class="text-gray-800 text-xl font-medium" id="comment">
             I'd suggest Macklin Motors Nissan Glasgow South to a friend because
             I had great service from my salesman Patrick and all of the team.
           </p>
-          <figure class="flex gap-4 mt-4 items-center">
+          <figure class="flex gap-4 mt-4 items-center profile-photo">
             <img
               src="/assets/profile-1.jpg"
               alt="Profile 1 photo"
@@ -1699,7 +1964,8 @@
         <img
           src="./assets/flex-shine-play.png"
           alt="car-img"
-          class="rounded-xl h-full"
+          class="rounded-xl h-full hover:cursor-pointer"
+          id="baner-image"
         />
       </figure>
       <section
@@ -1736,6 +2002,8 @@
         </button>
       </section>
     </article>
+    <!-- video popup -->
+
     <!-- Stats -->
     <article
       class="px-10 py-14 flex flex-col md:flex-row justify-around items-center gap-6"
@@ -1766,9 +2034,12 @@
           View All <span style="font-size: 20px">&#8599;</span>
         </button>
       </article>
-      <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        id="blog-post"
+      >
         <!-- blog-1 -->
-        <section class="group">
+        <!-- <section class="group">
           <figure class="overflow-hidden rounded-2xl hover:opacity-80">
             <img src="./assets/blog-car-1.png" alt="car-img" />
           </figure>
@@ -1782,7 +2053,7 @@
             </p>
           </article>
         </section>
-        <!-- blog-2 -->
+        
         <section class="group">
           <figure class="overflow-hidden rounded-2xl hover:opacity-80">
             <img src="./assets/blog-car-2.png" alt="car-img" />
@@ -1797,7 +2068,7 @@
             </p>
           </article>
         </section>
-        <!-- blog-3 -->
+        
         <section class="group">
           <figure class="overflow-hidden rounded-2xl hover:opacity-80">
             <img src="./assets/blog-car-3.png" alt="car-img" />
@@ -1811,7 +2082,7 @@
               BMW X5 Gold 2024 Sport Review: Light on Sport
             </p>
           </article>
-        </section>
+        </section> -->
       </article>
     </article>
     <!-- FAQ -->
@@ -1841,9 +2112,13 @@
             Receive pricing updates, shopping tips & more!
           </p>
         </section>
-        <form class="flex gap-4 w-full m-auto md:m-0 md:w-3/4 lg:w-xl relative">
+        <form
+          class="flex gap-4 w-full m-auto md:m-0 md:w-3/4 lg:w-xl relative"
+          id="signup-form"
+        >
           <!-- <label for="email">Email: </label> -->
           <input
+            id="email"
             type="email"
             placeholder="Your email address"
             class="flex-grow px-5 py-4.5 rounded-4xl bg-gray-800 border border-gray-700 text-white w-full"
