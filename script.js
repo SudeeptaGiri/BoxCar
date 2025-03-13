@@ -1,101 +1,5 @@
 // Global Variable carArray
 let carArray = [];
-function createCardGrid(carData,parent) {
-  
-
-  carArray = carData.map((car) => {
-    // console.log(car);
-    const article = document.createElement("article");
-    article.className =
-      "border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group";
-
-    const figure = document.createElement("figure");
-    figure.className = "overflow-hidden relative";
-
-    const imgCar = document.createElement("img");
-    imgCar.src = car.image;
-    imgCar.alt = car.name;
-    imgCar.className =
-      "h-full transition-transform duration-300 group-hover:scale-110";
-
-    const imgBookmark = document.createElement("img");
-    imgBookmark.src = "./assets/bookmark.png";
-    imgBookmark.alt = "bookmark-icon";
-    imgBookmark.className = "absolute top-5 right-4 h-9 w-9";
-
-    figure.appendChild(imgCar);
-    figure.appendChild(imgBookmark);
-
-    const header = document.createElement("header");
-    header.className = "flex flex-col gap-2 mx-6 border-b border-gray-300 py-3";
-
-    const title = document.createElement("h1");
-    title.className =
-      "font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3";
-    title.textContent = car.name;
-
-    const description = document.createElement("p");
-    description.className = "text-sm leading-3.5";
-    description.textContent = car.description;
-
-    header.appendChild(title);
-    header.appendChild(description);
-
-    const main = document.createElement("main");
-    main.className = "flex justify-between mx-6 border-b border-gray-300 py-3";
-
-    const info = [
-      { src: "./assets/miles.png", alt: "miles-svg", text: car.mileage },
-      { src: "./assets/kilometer.png", alt: "petrol-svg", text: car.fuel_type },
-      {
-        src: "./assets/automatic.png",
-        alt: "automatic-svg",
-        text: car.transmission,
-      },
-    ];
-
-    info.forEach(({ src, alt, text }) => {
-      const section = document.createElement("section");
-      section.className = "flex flex-col justify-center items-center gap-1";
-
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = alt;
-      img.className = "h-5 w-5 object-contain";
-
-      const span = document.createElement("span");
-      span.textContent = text;
-
-      section.appendChild(img);
-      section.appendChild(span);
-      main.appendChild(section);
-    });
-
-    const footer = document.createElement("footer");
-    footer.className = "flex justify-between mx-6 py-3";
-
-    const price = document.createElement("p");
-    price.className = "font-bold text-lg leading-7.5";
-    price.textContent = car.price;
-
-    const details = document.createElement("p");
-    details.className =
-      "font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer";
-    details.innerHTML = "View Details &#8599;";
-
-    footer.appendChild(price);
-    footer.appendChild(details);
-
-    article.appendChild(figure);
-    article.appendChild(header);
-    article.appendChild(main);
-    article.appendChild(footer);
-    parent.appendChild(article);
-    return {name:car.name, price:car.price, element:article}
-  });
-  
-
-}
 function showPopup(cards) {
   //car pop-up
   const popup = document.getElementById("popup");
@@ -220,15 +124,111 @@ carTypes.forEach((item) => {
 fetch("./data/cars.json")
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data);
     const topSellingCars = document.getElementById("top-selling-cars");
-    createCardGrid(data,topSellingCars);
+    console.log(data);
+    const carArray = data.map((car) => { // Store carArray properly
+      const article = document.createElement("article");
+      article.className =
+        "border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group car-cards";
+
+      const figure = document.createElement("figure");
+      figure.className = "overflow-hidden relative";
+
+      const imgCar = document.createElement("img");
+      imgCar.src = car.image;
+      imgCar.alt = car.name;
+      imgCar.className =
+        "h-full transition-transform duration-300 group-hover:scale-110";
+
+      const imgBookmark = document.createElement("img");
+      imgBookmark.src = "./assets/bookmark.png";
+      imgBookmark.alt = "bookmark-icon";
+      imgBookmark.className = "absolute top-5 right-4 h-9 w-9";
+
+      figure.appendChild(imgCar);
+      figure.appendChild(imgBookmark);
+
+      const header = document.createElement("header");
+      header.className = "flex flex-col gap-2 mx-6 border-b border-gray-300 py-3";
+
+      const title = document.createElement("h1");
+      title.className =
+        "font-medium leading-5 group-hover:underline hover:cursor-pointer group-hover:underline-offset-3";
+      title.textContent = car.name;
+
+      const description = document.createElement("p");
+      description.className = "text-sm leading-3.5";
+      description.textContent = car.description;
+
+      header.appendChild(title);
+      header.appendChild(description);
+
+      const main = document.createElement("main");
+      main.className = "flex justify-between mx-6 border-b border-gray-300 py-3";
+
+      const info = [
+        { src: "./assets/miles.png", alt: "miles-svg", text: car.mileage },
+        { src: "./assets/kilometer.png", alt: "petrol-svg", text: car.fuel_type },
+        {
+          src: "./assets/automatic.png",
+          alt: "automatic-svg",
+          text: car.transmission,
+        },
+      ];
+
+      info.forEach(({ src, alt, text }) => {
+        const section = document.createElement("section");
+        section.className = "flex flex-col justify-center items-center gap-1";
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = alt;
+        img.className = "h-5 w-5 object-contain";
+
+        const span = document.createElement("span");
+        span.textContent = text;
+
+        section.appendChild(img);
+        section.appendChild(span);
+        main.appendChild(section);
+      });
+
+      const footer = document.createElement("footer");
+      footer.className = "flex justify-between mx-6 py-3";
+
+      const price = document.createElement("p");
+      price.className = "font-bold text-lg leading-7.5";
+      price.textContent = car.price;
+
+      const details = document.createElement("p");
+      details.className =
+        "font-dm-sans font-normal leading-6.5 text-[#405FF2] hover:cursor-pointer";
+      details.innerHTML = "View Details &#8599;";
+
+      footer.appendChild(price);
+      footer.appendChild(details);
+
+      article.appendChild(figure);
+      article.appendChild(header);
+      article.appendChild(main);
+      article.appendChild(footer);
+      topSellingCars.appendChild(article);
+
+      return { name: car.name, price: car.price, element: article };
+    });
+
+    console.log("Grid Creation Completed");
+    
+    return carArray; // Ensure carArray is returned
   })
-  .then(() => {
-    const cards = document.querySelectorAll("#top-selling-cars div article");
+  .then((carArray) => {
+    console.log("car cards");
+    const cards = document.querySelectorAll(".car-cards");
+    console.log(cards);
     showPopup(cards);
   })
   .catch((error) => console.error("Error loading JSON data:", error));
+
 
   // Add search Functionality
 
@@ -308,7 +308,7 @@ fetch("./data/cars.json")
                 alt="miles-svg"
                 class="h-5 w-5 object-contain"
               />
-              <span>${item.mileage} Miles</span>
+              <span>${item.mileage}</span>
             </section>
             <section class="flex flex-col justify-center items-center gap-1">
               <img
@@ -327,7 +327,7 @@ fetch("./data/cars.json")
             </section>
           </main>
           <footer class="flex justify-between mx-6 py-3">
-            <p class="font-bold text-lg leading-7.5">$${item.price}</p>
+            <p class="font-bold text-lg leading-7.5">${item.price}</p>
             <p
               class="font-dm-sans font-normal leading-6.5 text-white hover:cursor-pointer"
             >
@@ -343,13 +343,29 @@ fetch("./data/cars.json")
     showPopup(cards);
   })
   .catch((error) => console.error("Error loading JSON data:", error));
-
-
+  let scrollAmount = 0;
+  let scrollMax = popularMakes.scrollWidth;
 leftScroll.addEventListener("click", () => {
-  popularMakes.scrollLeft -= 250;
+  if (scrollAmount <= 0) {
+    scrollAmount = 0;
+    return;
+  }
+  popularMakes.scrollTo({
+    top: 0,
+    left: scrollAmount -= 280,
+    behavior: 'smooth'
+  });
 });
 rightScroll.addEventListener("click", () => {
-  popularMakes.scrollLeft += 250;
+  if(scrollAmount>=scrollMax){
+    scrollAmount=scrollMax;
+    return;
+  }
+  popularMakes.scrollTo({
+    top: 0,
+    left: scrollAmount += 280,
+    behavior: 'smooth'
+  });
 });
 
 //Comments
@@ -400,6 +416,27 @@ prevComment.addEventListener("click",()=>{
 });
 
 // Add video to baner Image
+const videoPopup = document.getElementById("video-popup");
+const closeVideo = document.getElementById("close-video");
+const banerImage = document.getElementById("baner-image");
+banerImage.addEventListener("click", () => {
+  const video = document.getElementById("video");
+  video.src="./assets/car-video.mp4"
+  videoPopup.classList.remove("hidden");
+  videoPopup.classList.add("flex");
+})
+closeVideo.addEventListener("click", () => {
+  video.src=""
+  videoPopup.classList.add("hidden");
+  videoPopup.classList.remove("flex");
+});
+videoPopup.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    video.src=""
+    videoPopup.classList.add("hidden");
+    videoPopup.classList.remove("flex");
+  }
+});
 
 // Blog-posts
 const blogPosts = document.getElementById("blog-post");
@@ -412,7 +449,7 @@ fetch("./data/blogs.json")
       blogPosts.innerHTML+=`
         <section class="group">
           <figure class="overflow-hidden rounded-2xl hover:opacity-80">
-            <img src="${item.image}" />
+            <img src="${item.image}" alt="blog-image" />
           </figure>
           <article>
             <p class="py-1.5">
@@ -437,3 +474,116 @@ document.getElementById("signup-form").addEventListener("submit", function (even
 });
 
 
+// Accoridan
+document.querySelectorAll(".toggle-faq").forEach(button => {
+  button.addEventListener("click", function() {
+    const answer = document.getElementById(this.getAttribute("aria-controls"));
+    const isExpanded = this.getAttribute("aria-expanded") === "true";
+    
+    this.setAttribute("aria-expanded", !isExpanded);
+    answer.hidden = isExpanded;
+    this.querySelector("span").classList.toggle("rotate-180");
+  });
+});
+
+
+// AI Chart Integration
+const chatBtn = document.getElementById("chat-btn");
+const closeBtn = document.getElementById("close-btn");
+const chatBox = document.getElementById("chats");
+const chatMessages = document.getElementById("chat-messages");
+const chatForm = document.getElementById("chat-form");
+const chatInput = document.getElementById("input");
+const sendChatBtn = document.getElementById("submit");
+
+let userMessage;
+const API_KEY = "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"; 
+const SITE_URL = "https://creativelayers.net/themes/boxcar-html/index-3.html"; // Replace with your actual site URL
+const SITE_NAME = "BOXCAR"; // Replace with your site name
+
+// Function to toggle chatbot visibility
+chatBtn.addEventListener("click", () => {
+    chatBox.classList.remove("hidden");
+    chatBtn.classList.add("hidden");
+    closeBtn.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+    chatBox.classList.add("hidden");
+    chatBtn.classList.remove("hidden");
+    closeBtn.classList.add("hidden");
+});
+
+// Function to create chat message elements
+const createChatMessage = (message, sender) => {
+    console.log("From create Mesaage",message,sender)
+    const msg = document.createElement("p");
+    msg.classList.add(sender === "user" ? "user" : "bot");
+    msg.innerText = message;
+    chatMessages.appendChild(msg);
+};
+
+// Function to call OpenRouter API and get a response
+const generateResponse = (messageElement) => {
+    const API_URL = "https://openrouter.ai/api/v1/chat/completions";
+
+    fetch(API_URL, {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${API_KEY}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "model": "google/gemma-3-27b-it:free",
+            "messages": [{ role: "user", content: ` ${userMessage}` }]
+        })
+    })
+    .then(res => {
+        if (!res.ok) throw new Error("Network error");
+        return res.json();
+    })
+    .then(data => {
+        console.log("Inside Gen Response ",data);
+        messageElement.innerText = data.choices[0].message.content;
+    })
+    .catch(() => {
+        messageElement.innerText = "Oops! Something went wrong. Please try again!";
+    })
+    .finally(() => chatMessages.scrollTop = chatMessages.scrollHeight);
+};
+
+// Function to handle user chat input
+const handleChat = (event) => {
+    event.preventDefault();
+    
+    userMessage = chatInput.value.trim();
+    if (!userMessage) return;
+
+    // Add user message
+    createChatMessage(userMessage, "user");
+
+    // Add bot "thinking..." message
+    const botMessage = document.createElement("p");
+    botMessage.classList.add("bot", "bg-gray-200", "p-2", "rounded-xl", "self-start");
+    botMessage.innerText = "Thinking...";
+    chatMessages.appendChild(botMessage);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    // Generate bot response
+    generateResponse(botMessage);
+
+    // Clear input field
+    chatInput.value = "";
+};
+
+// Event listener for sending chat messages
+chatForm.addEventListener("submit", handleChat);
+
+
+// PWA
+if ("serviceWorker" in navigator) {
+
+      navigator.serviceWorker.register("/sw.js")
+          .then(() => console.log("Service Worker Registered"))
+          .catch((error) => console.log("Service Worker Registration Failed:", error));
+}

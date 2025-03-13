@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Buy and sell cars effortlessly with BoxCars. Explore top deals, list your vehicle, and find the perfect car today!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOXCARS</title>
     <link rel="stylesheet" href="output.css" />
@@ -19,8 +20,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
   </head>
-  <body class="font-dm-sans overflow-x-hidden">
+  <body class="font-dm-sans overflow-x-hidden" style="scroll-behavior: smooth;">
     <!-- Header -->
     <header
       class="min-h-screen w-screen flex flex-col justify-between px-10 bg-cover bg-center bg-no-repeat text-white"
@@ -34,13 +37,13 @@
           <a class="py-2 hover:cursor-pointer" id="menu-open" aria-label="menu">
             <i class="fa-solid fa-bars pr-2"></i>Menu
           </a>
-          <a class="px-5 py-2" aria-label="logo"
+          <a class="px-5 py-2" aria-label="logo" href="./index.html"
             ><img src="./assets/logo.png" alt="logo" class="h-6"
           /></a>
         </section>
         <!-- logo for large screee -->
         <section class="hidden lg:flex justify-between items-center">
-          <a class="px-5 py-2"
+          <a class="px-5 py-2" aria-label="logo" href="./index.html"
             ><img
               src="./assets/logo.png"
               alt="logo"
@@ -491,19 +494,19 @@
         class="flex justify-start items-center gap-20 overflow-x-scroll md:overflow-hidden"
       >
         <button
-          class="flex justify-around items-center cursor-pointer car-type bg-black text-white px-7 py-5 rounded-3xl"
+          class="flex justify-around items-center cursor-pointer car-type bg-black text-white pl-7 pr-10 py-5 rounded-3xl"
           aria-label="SUV"
         >
           <img class="h-4 mr-2" src="./assets/suv.png" alt="suv-svg" />SUV
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
           aria-label="sedan"
         >
           <img class="h-4 mr-2" src="./assets/seden.png" alt="sedan-svg" />Seden
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
           aria-label="hetchback"
         >
           <img
@@ -513,13 +516,13 @@
           />Hetchback
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
           aria-label="coupe"
         >
           <img class="h-4 mr-2" src="./assets/coupe.png" alt="coupe-svg" />Coupe
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
           aria-label="hybrid"
         >
           <img
@@ -529,7 +532,7 @@
           />Hybrid
         </button>
         <button
-          class="flex justify-around items-center cursor-pointer car-type px-7 py-5 rounded-3xl"
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
           aria-label="convertible"
         >
           <img
@@ -540,7 +543,29 @@
         </button>
       </footer>
     </header>
-    <aside></aside>
+    <!-- Chat Bot -->
+    <aside>
+      <button class="fixed bottom-10 right-10 z-50 hover:cursor-pointer p-2.5 rounded-full bg-gray-400 hover:scale-105 ease-in-out duration-300" aria-label="chatbot" id="chat-btn">
+        <img src="./assets/chatbot.png" alt="chatbot" class="h-12 w-12 rounded-full"/>
+      </button>
+      <article class="hidden fixed bottom-25 right-25 z-30 hover:cursor-pointer p-2.5 bg-gray-400 w-72 h-2/3 border-black flex flex-col gap-3"
+      style="border-radius: 20px 20px 0 20px;" 
+      id="chats">
+        <button class="fixed bottom-10 right-10 z-50 hover:cursor-pointer p-2.5 rounded-full bg-gray-400 hidden" aria-label="chatbot" id="close-btn">
+          <img src="./assets/close-x-svg.svg" alt="close" class="h-12 w-12 rounded-full">
+        </button>
+        <div class="flex flex-col gap-3 overflow-y-auto px-2" style="max-height: 85%; scrollbar-width: none;" id="chat-messages">
+          
+        </div>
+        
+        <form class="flex items-center gap-2 bg-gray-200 absolute bottom-0 left-0 right-0 p-2 " id="chat-form">
+          <input type="text" class="flex-grow border border-gray-300 rounded-full outline-none text-md p-2 shadow" placeholder="Type a message..." id="input">
+          <button type="submit" class="bg-blue-500 text-white font-medium rounded-xl hover:bg-blue-600 transition p-2 hover:cursor-pointer shadow" id="submit">
+            Send
+          </button>
+        </form>
+      </article>
+    </aside>
 
     <!-- Top Selling Cars -->
     <main class="px-10 text-black">
@@ -1068,58 +1093,68 @@
       </main>
     </main>
     <!-- Popup Window -->
-    <div
-      id="popup"
-      class="hidden fixed inset-0 bg-transparent backdrop-blur-sm bg-opacity-50 justify-center items-center z-50"
-    >
-      <div class="bg-white p-6 rounded-2xl shadow-xl relative w-11/12 max-w-lg">
-        <!-- Close Button -->
-        <button
-          id="closePopup"
-          class="absolute top-3 right-3 text-gray-900 text-5xl font-bold hover:cursor-pointer"
-        >
-          &times;
+    <div 
+  id="popup" 
+  class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50 p-4"
+>
+  <div class="bg-white rounded-2xl shadow-2xl relative w-11/12 max-w-4xl border border-gray-100 flex flex-col md:flex-row overflow-hidden">
+    <!-- Left Side - Image -->
+    <figure class="md:w-2/5 overflow-hidden">
+      <img 
+        id="popupImage" 
+        src="" 
+        alt="Car Image" 
+        class="w-full h-full object-cover" 
+      />
+    </figure>
+    
+    <!-- Right Side - Content -->
+    <div class="md:w-3/5 p-6 flex flex-col">
+      <!-- Close Button -->
+      <button 
+        id="closePopup" 
+        class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 transition-colors duration-200 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
+      >
+        <span class="text-2xl">&times;</span>
+      </button>
+      
+      <header class="pb-3 border-b border-gray-100">
+        <h1 id="popupTitle" class="text-xl font-bold text-gray-800"></h1>
+        <p id="popupDesc" class="text-gray-500 text-sm mt-1"></p>
+      </header>
+      
+      <main class="flex justify-between py-5 border-b border-gray-100 flex-grow">
+        <section class="flex flex-col items-center gap-2">
+          <div class="bg-blue-50 p-2 rounded-full">
+            <img src="./assets/miles.png" alt="miles" class="h-6 w-6" />
+          </div>
+          <span id="popupMiles" class="text-sm font-medium"></span>
+        </section>
+        
+        <section class="flex flex-col items-center gap-2">
+          <div class="bg-green-50 p-2 rounded-full">
+            <img src="./assets/kilometer.png" alt="fuel" class="h-6 w-6" />
+          </div>
+          <span id="popupFuel" class="text-sm font-medium"></span>
+        </section>
+        
+        <section class="flex flex-col items-center gap-2">
+          <div class="bg-purple-50 p-2 rounded-full">
+            <img src="./assets/automatic.png" alt="transmission" class="h-6 w-6" />
+          </div>
+          <span id="popupTransmission" class="text-sm font-medium"></span>
+        </section>
+      </main>
+      
+      <footer class="py-4 flex justify-between items-center mt-auto">
+        <p id="popupPrice" class="font-bold text-xl text-gray-800"></p>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-medium shadow-sm transition-colors duration-200 flex items-center hover:cursor-pointer">
+          Buy Now
         </button>
-
-        <!-- Popup Content -->
-        <figure class="overflow-hidden">
-          <img
-            id="popupImage"
-            src=""
-            alt="Car Image"
-            class="w-full rounded-xl"
-          />
-        </figure>
-        <header class="py-4 border-b">
-          <h1 id="popupTitle" class="text-xl font-semibold"></h1>
-          <p id="popupDesc" class="text-gray-600 text-sm"></p>
-        </header>
-        <main class="flex justify-between py-4 border-b">
-          <section class="flex flex-col items-center gap-1">
-            <img src="./assets/miles.png" alt="miles" class="h-5 w-5" />
-            <span id="popupMiles"></span>
-          </section>
-          <section class="flex flex-col items-center gap-1">
-            <img src="./assets/kilometer.png" alt="fuel" class="h-5 w-5" />
-            <span id="popupFuel"></span>
-          </section>
-          <section class="flex flex-col items-center gap-1">
-            <img
-              src="./assets/automatic.png"
-              alt="transmission"
-              class="h-5 w-5"
-            />
-            <span id="popupTransmission"></span>
-          </section>
-        </main>
-        <footer class="py-4 flex justify-between">
-          <p id="popupPrice" class="font-bold text-lg"></p>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
-            Buy Now
-          </button>
-        </footer>
-      </div>
+      </footer>
     </div>
+  </div>
+</div>
 
     <!-- Buy Car & Sell Car -->
     <section
@@ -2003,7 +2038,26 @@
       </section>
     </article>
     <!-- video popup -->
+    <div
+      id="video-popup"
+      class="hidden fixed inset-0 bg-transparent backdrop-blur-sm bg-opacity-50 justify-center items-center z-50"
+    >
+      <div class="bg-white p-6 rounded-2xl shadow-xl relative max-w-4xl">
+        <!-- Close Button -->
+        <button
+          id="close-video"
+          class="absolute top-3 right-3 text-gray-900 text-5xl font-bold hover:cursor-pointer z-40"
+        >
+          &times;
+        </button>
 
+        <!-- Popup Content -->
+        <figure class="overflow-hidden">
+          <video src="" controls class="w-full rounded-xl" id="video"></video>
+        </figure>
+        
+      </div>
+    </div>
     <!-- Stats -->
     <article
       class="px-10 py-14 flex flex-col md:flex-row justify-around items-center gap-6"
@@ -2104,7 +2158,7 @@
     <footer class="bg-[#050B20] text-white py-16 px-10 mx-auto">
       <!-- Newsletter Section -->
       <div
-        class="mb-16 flex flex-col md:flex-row justify-between items-center gap-3"
+        class=" flex flex-col md:flex-row justify-between items-center gap-3"
       >
         <section>
           <h2 class="text-2xl font-semibold mb-2">Join BoxCar</h2>
@@ -2133,7 +2187,49 @@
           </button>
         </form>
       </div>
-
+      <!-- Accordion FAQ -->
+      <section id="faq-accordion" aria-labelledby="faq-heading" class="w-full py-10 rounded-lg shadow-md mb-10">
+        <h2 id="faq-heading" class="sr-only">Box Car FAQs</h2>
+        
+        <article class="border-b border-gray-200 dark:border-gray-700">
+          <h3 id="faq-question-1">
+            <button type="button" aria-expanded="true" aria-controls="faq-answer-1" class="flex items-center justify-between w-full py-4 text-left text-gray-300 font-medium focus:outline-none hover:bg-gray-800 toggle-faq">
+              How do I list my car for sale on Box Car?
+              <span aria-hidden="true" class="ml-2 transform rotate-180">▼</span>
+            </button>
+          </h3>
+          <div id="faq-answer-1" role="region" aria-labelledby="faq-question-1" class="py-4  text-gray-400">
+            <p>To list your car, sign up or log in, navigate to the "Sell Your Car" section, provide details about your car, upload images, and set a price. Your listing will be live once reviewed.</p>
+          </div>
+        </article>
+        
+        <article class="border-b border-gray-700">
+          <h3 id="faq-question-2">
+            <button type="button" aria-expanded="false" aria-controls="faq-answer-2" class="flex items-center justify-between w-full py-4 text-left text-gray-300 font-medium focus:outline-none hover:bg-gray-800 toggle-faq">
+              What documents do I need to sell my car?
+              <span aria-hidden="true" class="ml-2">▼</span>
+            </button>
+          </h3>
+          <div id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden class="py-4 text-gray-400">
+            <p>You will need the vehicle title, registration, service history, and a valid ID. Some states may require a bill of sale or emissions test certification.</p>
+          </div>
+        </article>
+        
+        <article class="border-b border-gray-700">
+          <h3 id="faq-question-3">
+            <button type="button" aria-expanded="false" aria-controls="faq-answer-3" class="flex items-center justify-between w-full py-4 text-left text-gray-300 font-medium focus:outline-none hover:bg-gray-800 toggle-faq">
+              How does Box Car verify the authenticity of listings?
+              <span aria-hidden="true" class="ml-2">▼</span>
+            </button>
+          </h3>
+          <div id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden class="py-4 text-gray-400">
+            <p>Our team reviews all listings to ensure they meet our standards. We also encourage sellers to provide detailed descriptions and verified vehicle history reports.</p>
+          </div>
+        </article>
+      </section>
+      
+      
+      
       <!-- Footer Links Grid -->
       <footer
         class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16"
