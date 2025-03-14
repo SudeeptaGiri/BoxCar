@@ -126,7 +126,7 @@ fetch("./data/cars.json")
   .then((data) => {
     const topSellingCars = document.getElementById("top-selling-cars");
     console.log(data);
-    const carArray = data.map((car) => { // Store carArray properly
+    carArray = data.map((car) => { // Store carArray properly
       const article = document.createElement("article");
       article.className =
         "border border-gray-300 rounded-2xl flex flex-col gap-2 overflow-hidden hover:shadow-2xl group car-cards";
@@ -216,12 +216,8 @@ fetch("./data/cars.json")
 
       return { name: car.name, price: car.price, element: article };
     });
-
-    console.log("Grid Creation Completed");
-    
-    return carArray; // Ensure carArray is returned
   })
-  .then((carArray) => {
+  .then(() => {
     console.log("car cards");
     const cards = document.querySelectorAll(".car-cards");
     console.log(cards);
@@ -580,7 +576,7 @@ const handleChat = (event) => {
 chatForm.addEventListener("submit", handleChat);
 
 
-// PWA
+PWA
 if ("serviceWorker" in navigator) {
 
       navigator.serviceWorker.register("/sw.js")
