@@ -9,7 +9,7 @@
         "price": "$40,000"
       },
       {
-        "name": "T-Cross-2023",
+        "name": "Volkswagen T-Cross-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
         "image": "./assets/Tcross.png",
         "mileage": "15 Miles",
@@ -18,7 +18,7 @@
         "price": "$15,000"
       },
       {
-        "name": "C-Class-2023",
+        "name": "Mercedes C-Class-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
         "image": "./assets/cClass.png",
         "mileage": "50 Miles",
@@ -37,7 +37,7 @@
         "tag": "Great Price"
       },
       {
-        "name": "new GLC-2023",
+        "name": "Mercedes new GLC-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
         "image": "./assets/newGLC.png",
         "mileage": "50 Miles",
@@ -56,7 +56,7 @@
         "price": "$58,000"
       },
       {
-        "name": "Corolla Altis - 2023",
+        "name": "Toyota Corolla Altis - 2023",
         "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
         "image": "./assets/corolla-atlis.png",
         "mileage": "1500 Miles",
