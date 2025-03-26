@@ -703,7 +703,7 @@ const handleChat = (event) => {
 // Event listener for sending chat messages
 chatForm.addEventListener("submit", handleChat);
 
-PWA;
+// PWA
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("/sw.js")
