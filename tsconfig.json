@@ -7,7 +7,7 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM", "WebWorker"],  
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],  
     "skipLibCheck": true
   },
   "include": ["src/**/*.ts"],  
