@@ -2,7 +2,7 @@
       {
         "name": "Toyota Camry New",
         "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
-        "image": "./assets/toyota.png",
+        "image": "../public/assets/toyota.png",
         "mileage": "15 Miles",
         "fuel_type": "Petrol",
         "transmission": "CVT",
@@ -11,7 +11,7 @@
       {
         "name": "Volkswagen T-Cross-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
-        "image": "./assets/Tcross.png",
+        "image": "../public/assets/Tcross.png",
         "mileage": "15 Miles",
         "fuel_type": "Petrol",
         "transmission": "CVT",
@@ -20,7 +20,7 @@
       {
         "name": "Mercedes C-Class-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
-        "image": "./assets/cClass.png",
+        "image": "../public/assets/cClass.png",
         "mileage": "50 Miles",
         "fuel_type": "Petrol",
         "transmission": "Automatic",
@@ -29,7 +29,7 @@
       {
         "name": "Ford Transit-2021",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
-        "image": "./assets/fordTranssit.png",
+        "image": "../public/assets/fordTranssit.png",
         "mileage": "250 Miles",
         "fuel_type": "Diesel",
         "transmission": "Manual",
@@ -39,7 +39,7 @@
       {
         "name": "Mercedes new GLC-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
-        "image": "./assets/newGLC.png",
+        "image": "../public/assets/newGLC.png",
         "mileage": "50 Miles",
         "fuel_type": "Petrol",
         "transmission": "Automatic",
@@ -49,7 +49,7 @@
       {
         "name": "Audi A6 3.5 - New",
         "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
-        "image": "./assets/audiA6.png",
+        "image": "../public/assets/audiA6.png",
         "mileage": "100 Miles",
         "fuel_type": "Petrol",
         "transmission": "Automatic",
@@ -58,7 +58,7 @@
       {
         "name": "Toyota Corolla Altis - 2023",
         "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
-        "image": "./assets/corolla-atlis.png",
+        "image": "../public/assets/corolla-atlis.png",
         "mileage": "1500 Miles",
         "fuel_type": "Petrol",
         "transmission": "CVT",
@@ -67,7 +67,7 @@
       {
         "name":"Ford Explorer 2023",
         "description":"3.5 D5 PowerPulse Momentum 5dr AW…",
-        "image":"./assets/fordExplorer.png",
+        "image":"../public/assets/fordExplorer.png",
         "mileage":"10 Miles",
         "fuel_type":"Diesel",
         "transmission":"CVT",

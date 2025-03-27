@@ -8,14 +8,14 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOXCARS</title>
-    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./dist/style.css" />
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,13 +24,13 @@
       rel="stylesheet"
     />
     <!-- PWA -->
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="./public/manifest.json" />
   </head>
   <body class="font-dm-sans overflow-x-hidden" style="scroll-behavior: smooth">
     <!-- Header -->
     <header
       class="min-h-screen w-screen flex flex-col justify-between px-10 bg-cover bg-center bg-no-repeat text-white"
-      style="background-image: url(./assets/image-1.jpg)"
+      style="background-image: url(./public/assets/image-1.jpg)"
       id="top"
     >
       <!-- Nav Bar -->
@@ -41,14 +41,14 @@
             <i class="fa-solid fa-bars pr-2"></i>Menu
           </a>
           <a class="px-5 py-2" aria-label="logo" href="./index.html"
-            ><img src="./assets/logo.png" alt="logo" class="h-6"
+            ><img src="./public/assets/logo.png" alt="logo" class="h-6"
           /></a>
         </section>
         <!-- logo for large screee -->
         <section class="hidden lg:flex justify-between items-center">
           <a class="px-5 py-2" aria-label="logo" href="./index.html"
             ><img
-              src="./assets/logo.png"
+              src="./public/assets/logo.png"
               alt="logo"
               class="h-6 hover:cursor-pointer"
           /></a>
@@ -487,13 +487,13 @@
           class="flex justify-around items-center cursor-pointer car-type bg-black text-white pl-7 pr-10 py-5 rounded-3xl"
           aria-label="SUV"
         >
-          <img class="h-4 mr-2" src="./assets/suv.png" alt="suv-svg" />SUV
+          <img class="h-4 mr-2" src="./public/assets/suv.png" alt="suv-svg" />SUV
         </button>
         <button
           class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
           aria-label="sedan"
         >
-          <img class="h-4 mr-2" src="./assets/seden.png" alt="sedan-svg" />Seden
+          <img class="h-4 mr-2" src="./public/assets/seden.png" alt="sedan-svg" />Seden
         </button>
         <button
           class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
@@ -501,7 +501,7 @@
         >
           <img
             class="h-4 mr-2"
-            src="./assets/hetchback.png"
+            src="./public/assets/hetchback.png"
             alt="hetchback-svg"
           />Hetchback
         </button>
@@ -509,7 +509,7 @@
           class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
           aria-label="coupe"
         >
-          <img class="h-4 mr-2" src="./assets/coupe.png" alt="coupe-svg" />Coupe
+          <img class="h-4 mr-2" src="./public/assets/coupe.png" alt="coupe-svg" />Coupe
         </button>
         <button
           class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
@@ -517,7 +517,7 @@
         >
           <img
             class="h-4 mr-2"
-            src="./assets/hybrid.png"
+            src="./public/assets/hybrid.png"
             alt="hybrid-svg"
           />Hybrid
         </button>
@@ -527,7 +527,7 @@
         >
           <img
             class="h-4 mr-2"
-            src="./assets/coupe.png"
+            src="./public/assets/coupe.png"
             alt="coupe-svg"
           />Convertible
         </button>
@@ -541,7 +541,7 @@
         id="chat-btn"
       >
         <img
-          src="./assets/chatbot.png"
+          src="./public/assets/chatbot.png"
           alt="chatbot"
           class="h-12 w-12 rounded-full"
         />
@@ -561,7 +561,7 @@
             id="close-btn"
           >
             <img
-              src="./assets/close-x-svg.svg"
+              src="./public/assets/close-x-svg.svg"
               alt="close"
               class="h-5 w-5 rounded-full"
             />
@@ -649,14 +649,14 @@
           >
             <section class="flex flex-col items-center gap-2">
               <div class="bg-blue-50 p-2 rounded-full">
-                <img src="./assets/miles.png" alt="miles" class="h-6 w-6" />
+                <img src="./public/assets/miles.png" alt="miles" class="h-6 w-6" />
               </div>
               <span id="popupMiles" class="text-sm font-medium"></span>
             </section>
 
             <section class="flex flex-col items-center gap-2">
               <div class="bg-green-50 p-2 rounded-full">
-                <img src="./assets/kilometer.png" alt="fuel" class="h-6 w-6" />
+                <img src="./public/assets/kilometer.png" alt="fuel" class="h-6 w-6" />
               </div>
               <span id="popupFuel" class="text-sm font-medium"></span>
             </section>
@@ -664,7 +664,7 @@
             <section class="flex flex-col items-center gap-2">
               <div class="bg-purple-50 p-2 rounded-full">
                 <img
-                  src="./assets/automatic.png"
+                  src="./public/assets/automatic.png"
                   alt="transmission"
                   class="h-6 w-6"
                 />
@@ -722,7 +722,7 @@
             </svg>
           </button>
           <figure class="w-28 h-28 hidden md:block">
-            <img src="./assets/buy-car.png" alt="buy-car-svg" />
+            <img src="./public/assets/buy-car.png" alt="buy-car-svg" />
           </figure>
         </footer>
       </article>
@@ -760,7 +760,7 @@
             </svg>
           </button>
           <figure class="w-28 h-28 hidden md:block">
-            <img src="./assets/sell-car.png" alt="sell-car-svg" />
+            <img src="./public/assets/sell-car.png" alt="sell-car-svg" />
           </figure>
         </footer>
       </article>
@@ -777,7 +777,7 @@
         <!-- Special Financing Offers -->
         <article class="flex flex-col gap-4">
           <figure class="w-12 h-12">
-            <img src="./assets/fin-offer.png" alt="final-offer-img" />
+            <img src="./public/assets/fin-offer.png" alt="final-offer-img" />
           </figure>
           <h3 class="text-xl font-semibold text-gray-900">
             Special Financing Offers
@@ -792,7 +792,7 @@
         <article class="flex flex-col gap-4">
           <div class="w-12 h-12">
             <figure class="w-12 h-12">
-              <img src="./assets/car-dealership.png" alt="final-offer-img" />
+              <img src="./public/assets/car-dealership.png" alt="final-offer-img" />
             </figure>
           </div>
           <h3 class="text-xl font-semibold text-gray-900">
@@ -807,7 +807,7 @@
         <!-- Transparent Pricing -->
         <article class="flex flex-col gap-4">
           <figure class="w-12 h-12">
-            <img src="./assets/trasparent-prising.png" alt="fin-offer" />
+            <img src="./public/assets/trasparent-prising.png" alt="fin-offer" />
           </figure>
           <h3 class="text-xl font-semibold text-gray-900">
             Transparent Pricing
@@ -821,7 +821,7 @@
         <!-- Expert Car Service -->
         <article class="flex flex-col gap-4">
           <figure class="w-12 h-12">
-            <img src="./assets/car-service.png" alt="fin-offer" />
+            <img src="./public/assets/car-service.png" alt="fin-offer" />
           </figure>
           <h3 class="text-xl font-semibold text-gray-900">
             Expert Car Service
@@ -987,17 +987,17 @@
           </p>
           <figure class="flex gap-4 mt-4 items-center profile-photo">
             <img
-              src="/assets/profile-1.jpg"
+              src="/public/assets/profile-1.jpg"
               alt="Profile 1 photo"
               class="w-12 h-12 rounded-full border-2 border-blue-400 p-0.5"
             />
             <img
-              src="/assets/profile-2.png"
+              src="/public/assets/profile-2.png"
               alt="Profile 2 photo"
               class="w-10 h-10 rounded-full"
             />
             <img
-              src="/assets/profile-3.png"
+              src="/public/assets/profile-3.png"
               alt="Profile 3 photo"
               class="w-10 h-10 rounded-full"
             />
@@ -1020,7 +1020,7 @@
           class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
         >
           <img
-            src="./assets/audi-logo.png"
+            src="./public/assets/audi-logo.png"
             alt="audi-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
@@ -1030,7 +1030,7 @@
           class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
         >
           <img
-            src="./assets/BMW-logo.png"
+            src="./public/assets/BMW-logo.png"
             alt="bmw-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
@@ -1040,7 +1040,7 @@
           class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
         >
           <img
-            src="./assets/ford-logo.png"
+            src="./public/assets/ford-logo.png"
             alt="Ford-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
@@ -1050,7 +1050,7 @@
           class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
         >
           <img
-            src="./assets/medrcedes-logo.png"
+            src="./public/assets/medrcedes-logo.png"
             alt="medrcedes-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
@@ -1062,7 +1062,7 @@
           class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
         >
           <img
-            src="./assets/peugeot-logo.png"
+            src="./public/assets/peugeot-logo.png"
             alt="peugeot-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
@@ -1072,7 +1072,7 @@
           class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
         >
           <img
-            src="./assets/Volkswagen-logo.png"
+            src="./public/assets/Volkswagen-logo.png"
             alt="Volkswagen-logo-image"
             class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
           />
@@ -1086,7 +1086,7 @@
     >
       <figure class="lg:h-3xl md:h-2xl h-xl">
         <img
-          src="./assets/flex-shine-play.png"
+          src="./public/assets/flex-shine-play.png"
           alt="car-img"
           class="rounded-xl h-full hover:cursor-pointer"
           id="baner-image"
@@ -1619,6 +1619,6 @@
       </footer>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="./dist/main.js"></script>
   </body>
 </html>
