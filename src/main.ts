@@ -562,6 +562,7 @@ function initializeAccordion(): void {
 }
 
 // AI Chat Functionality
+import { API_KEY } from "./config";
 interface ChatMessage {
   role: 'user' | 'system' | 'bot';
   content: string;
@@ -576,6 +577,7 @@ class ChatBot {
   private chatInput: HTMLInputElement;
   private API_KEY: string;
 
+
   constructor() {
     this.chatBox = document.getElementById("chats") as HTMLDivElement;
     this.chatBtn = document.getElementById("chat-btn") as HTMLButtonElement;
@@ -583,7 +585,7 @@ class ChatBot {
     this.chatMessages = document.getElementById("chat-messages") as HTMLDivElement;
     this.chatForm = document.getElementById("chat-form") as HTMLFormElement;
     this.chatInput = document.getElementById("input") as HTMLInputElement;
-    this.API_KEY = "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";
+    this.API_KEY =API_KEY;
 
     this.initializeEventListeners();
   }
