@@ -1,5 +1,6 @@
  [
       {
+        "id": 1,
         "name": "Toyota Camry New",
         "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
         "image": "../public/assets/toyota.png",
@@ -9,6 +10,7 @@
         "price": "$40,000"
       },
       {
+        "id": 2,
         "name": "Volkswagen T-Cross-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
         "image": "../public/assets/Tcross.png",
@@ -18,6 +20,7 @@
         "price": "$15,000"
       },
       {
+        "id": 3,
         "name": "Mercedes C-Class-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
         "image": "../public/assets/cClass.png",
@@ -27,6 +30,7 @@
         "price": "$150,000"
       },
       {
+        "id": 4,
         "name": "Ford Transit-2021",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
         "image": "../public/assets/fordTranssit.png",
@@ -37,6 +41,7 @@
         "tag": "Great Price"
       },
       {
+        "id": 5,
         "name": "Mercedes new GLC-2023",
         "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
         "image": "../public/assets/newGLC.png",
@@ -47,6 +52,7 @@
         "tag": "Low Mileage"
       },
       {
+        "id": 6,
         "name": "Audi A6 3.5 - New",
         "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
         "image": "../public/assets/audiA6.png",
@@ -56,6 +62,7 @@
         "price": "$58,000"
       },
       {
+        "id": 7,
         "name": "Toyota Corolla Altis - 2023",
         "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
         "image": "../public/assets/corolla-atlis.png",
@@ -65,6 +72,7 @@
         "price": "$45,000"
       },
       {
+        "id": 8,
         "name":"Ford Explorer 2023",
         "description":"3.5 D5 PowerPulse Momentum 5dr AW…",
         "image":"../public/assets/fordExplorer.png",

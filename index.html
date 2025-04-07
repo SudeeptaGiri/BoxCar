@@ -606,6 +606,15 @@
           View All <span style="font-size: 30px">&#8599;</span>
         </button>
       </article>
+      <section id="noCarFound" class="hidden flex-col items-center justify-center p-8 min-h-64 bg-gray-50 rounded-lg shadow-sm border border-gray-200 ">
+        <section class="text-center">
+          <svg class="mx-auto h-16 w-16 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+          <h3 id="noCarFound" class="mt-4 text-xl font-semibold text-gray-900">No Cars Found</h3>
+          <p class="mt-2 text-sm text-gray-500">We couldn't find any vehicles matching your search criteria.</p>
+        </section>
+      </section>
       <main
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         id="top-selling-cars"
@@ -1282,26 +1291,53 @@
           </p>
         </section>
         <form
-          class="flex gap-4 w-full m-auto md:m-0 md:w-3/4 lg:w-xl relative"
-          id="signup-form"
-        >
-          <!-- <label for="email">Email: </label> -->
-          <input
-            id="email"
-            type="email"
-            placeholder="Your email address"
-            class="flex-grow px-5 py-4.5 rounded-4xl bg-gray-800 border border-gray-700 text-white w-full"
-            required
-          />
-          <button
-            type="submit"
-            class="px-7 py-2 bg-blue-600 hover:bg-blue-700 rounded-3xl font-medium absolute top-2.5 right-3 hover:cursor-pointer"
-            aria-label="Sign Up"
-          >
-            Sign Up
-          </button>
-        </form>
+  class="flex gap-4 w-full m-auto md:m-0 md:w-3/4 lg:w-xl relative"
+  id="signup-form"
+>
+  <input
+    id="email"
+    type="email"
+    placeholder="Your email address"
+    class="flex-grow px-5 py-4 rounded-3xl bg-gray-800 border border-gray-700 text-white w-full"
+    required
+  />
+  <button
+    type="submit"
+    class="px-7 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-3xl font-medium absolute top-2.5 right-3 hover:cursor-pointer"
+    aria-label="Sign Up"
+  >
+    Sign Up
+  </button>
+</form>
       </div>
+      <!-- Pop Up Modal -->
+<section
+id="custom-popup"
+class="fixed inset-0 bg-transparent bg-opacity-50 flex justify-center items-center z-50 hidden backdrop-blur-xs"
+role="dialog"
+aria-labelledby="popup-title"
+aria-describedby="popup-message"
+>
+<article class="bg-white rounded-lg shadow-lg max-w-md w-11/12 p-6 relative">
+  <button
+    class="closePopup absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl font-bold"
+    aria-label="Close popup"
+  >
+    &times;
+  </button>
+  <header>
+    <h3 id="popup-title" class="text-lg font-semibold text-gray-800 mb-2">Thank You!</h3>
+  </header>
+  <p id="popup-message" class="text-gray-600 mb-4">Thank you for signing up.</p>
+  <footer>
+    <button
+      class="closePopup px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors w-full"
+    >
+      Continue
+    </button>
+  </footer>
+</article>
+</section>
       <!-- Accordion FAQ -->
       <section
         id="faq-accordion"
