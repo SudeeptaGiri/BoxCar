@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Buy and sell cars effortlessly with BoxCars. Explore top deals, list your vehicle, and find the perfect car today!"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOXCARS</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- PWA -->
+    <link rel="manifest" href="./public/manifest.json" />
+  </head>
+  <body class="font-dm-sans overflow-x-hidden" style="scroll-behavior: smooth">
+    <!-- Header -->
+    <header
+      class="min-h-screen w-screen flex flex-col justify-between px-10 bg-cover bg-center bg-no-repeat text-white"
+      style="background-image: url(./public/assets/image-1.jpg)"
+      id="top"
+    >
+      <!-- Nav Bar -->
+      <nav class="flex justify-between w-full py-5 items-center flex-nowrap">
+        <!-- menu & logo for mob -->
+        <section class="flex lg:hidden justify-between items-center w-full">
+          <a class="py-2 hover:cursor-pointer" id="menu-open" aria-label="menu">
+            <i class="fa-solid fa-bars pr-2"></i>Menu
+          </a>
+          <a class="px-5 py-2" aria-label="logo" href="./index.html"
+            ><img src="./public/assets/logo.png" alt="logo" class="h-6"
+          /></a>
+        </section>
+        <!-- logo for large screee -->
+        <section class="hidden lg:flex justify-between items-center">
+          <a class="px-5 py-2" aria-label="logo" href="./index.html"
+            ><img
+              src="./public/assets/logo.png"
+              alt="logo"
+              class="h-6 hover:cursor-pointer"
+          /></a>
+        </section>
+        <section
+          class="hidden lg:flex justify-around items-center flex-nowrap gap-1 px-10"
+        >
+          <!-- Home Dropdown -->
+          <nav class="relative group">
+            <a
+              href="#"
+              class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+              aria-label="home"
+            >
+              <span>Home </span><i class="fa-solid fa-caret-down ml-2"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="home style 1"
+                  >Home Style 1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="home style 2"
+                  >Home Style 2</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="home style 3"
+                  >Home Style 3</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Listing Dropdown -->
+          <nav class="relative group">
+            <a
+              href="#"
+              class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+              aria-label="listing"
+            >
+              <span>Listing</span> <i class="fa-solid fa-caret-down ml-2"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="new listing"
+                  >New Listings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="featured cars"
+                  >Featured Cars</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="used cars"
+                  >Used Cars</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Blog Dropdown -->
+          <nav class="relative group">
+            <a
+              href="#"
+              class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+              aria-label="blog"
+            >
+              <span>Blog</span> <i class="fa-solid fa-caret-down ml-2"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="latest news"
+                  >Latest News</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="car reviews"
+                  >Car Reviews</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="industry updates"
+                  >Industry Updates</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Pages Dropdown -->
+          <nav class="relative group">
+            <a
+              href="#"
+              class="px-4 py-5 text-center hover:opacity-90 inline-flex items-center"
+              aria-label="pages"
+            >
+              <span>Pages</span> <i class="fa-solid fa-caret-down ml-2"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg py-2 w-48 z-10"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="about us"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="our team"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  aria-label="faq"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a
+            href="#"
+            class="px-4 py-5 text-center hover:opacity-90"
+            aria-label="about"
+            >About</a
+          >
+          <a
+            href="#"
+            class="px-4 py-5 text-center hover:opacity-90"
+            aria-label="contact"
+            >Contact</a
+          >
+          <button class="px-2 hover:cursor-pointer" aria-label="sign in">
+            <i class="fas fa-user text-2xs px-2"></i>Sign in
+          </button>
+          <button
+            class="border rounded-2xl px-4 py-2 text-bold hover:bg-[#405FF2] hover:cursor-pointer transition-all duration-300 ease-in-out"
+            aria-label="add listing"
+          >
+            Add Listing
+          </button>
+        </section>
+        <!-- Side Bar with Dropdowns -->
+        <section
+          id="menu"
+          class="absolute top-0 left-0 bg-slate-700 text-white w-full text-xl flex-col justify-center origin-left animate-open-menu animation-open-menu hidden md:w-2xl"
+        >
+          <button
+            class="text-8xl self-end px-6 hover:cursor-pointer"
+            id="menu-close"
+            aria-label="close"
+          >
+            &times;
+          </button>
+          <nav class="flex flex-col min-h-screen items-center z-50">
+            <!-- Mobile Home Dropdown -->
+            <details class="w-full group">
+              <summary
+                class="w-full py-5 text-center hover:opacity-90 cursor-pointer list-none"
+              >
+                Home <i class="fa-solid fa-caret-down ml-1"></i>
+              </summary>
+              <ul
+                class="bg-slate-600 flex flex-col justify-center items-center gap-1"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="home style 1"
+                    >Home Style 1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="home style 2"
+                    >Home Style 2</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500"
+                    aria-label="home style 3"
+                    >Home Style 3</a
+                  >
+                </li>
+              </ul>
+            </details>
+            <!-- Mobile Listing Dropdown -->
+            <details class="w-full group">
+              <summary
+                class="w-full py-5 text-center hover:opacity-90 cursor-pointer list-none"
+              >
+                Listing <i class="fa-solid fa-caret-down ml-1"></i>
+              </summary>
+              <ul
+                class="bg-slate-600 flex flex-col justify-center items-center gap-1"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="new listing"
+                    >New Listings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="featured cars"
+                    >Featured Cars</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500"
+                    aria-label="used cars"
+                    >Used Cars</a
+                  >
+                </li>
+              </ul>
+            </details>
+            <!-- Blogs with drop down -->
+            <details class="w-full group">
+              <summary
+                class="w-full py-5 text-center hover:opacity-90 cursor-pointer list-none"
+              >
+                Blogs <i class="fa-solid fa-caret-down ml-1"></i>
+              </summary>
+              <ul
+                class="bg-slate-600 flex flex-col justify-center items-center gap-1"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="latest news"
+                    >Latest News</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="car reviews"
+                    >Car Reviews</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500"
+                    aria-label="industry updates"
+                    >Industry Updates</a
+                  >
+                </li>
+              </ul>
+            </details>
+            <!-- Pages with drop down -->
+            <details class="w-full group">
+              <summary
+                class="w-full py-5 text-center hover:opacity-90 cursor-pointer list-none"
+              >
+                Pages <i class="fa-solid fa-caret-down ml-1"></i>
+              </summary>
+              <ul
+                class="bg-slate-600 flex flex-col justify-center items-center gap-1"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="about us"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500 border-b"
+                    aria-label="our team"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 hover:bg-slate-500"
+                    aria-label="faqs"
+                    >FAQs</a
+                  >
+                </li>
+              </ul>
+            </details>
+            <!-- rest -->
+            <a
+              href="#"
+              class="w-full py-5 text-center hover:opacity-90"
+              aria-label="about"
+              >About</a
+            >
+            <a
+              href="#"
+              class="w-full py-5 text-center hover:opacity-90"
+              aria-label="contact"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="w-full py-5 text-center hover:opacity-90"
+              aria-label="sign in"
+            >
+              <i class="fas fa-user text-2xs px-2"></i>Sign in
+            </a>
+            <a
+              href="#"
+              class="w-full py-5 text-center hover:opacity-90 text-bold"
+              aria-label="add listing"
+              >Add Listing</a
+            >
+          </nav>
+        </section>
+      </nav>
+      <!-- Hero Section -->
+      <main class="flex flex-col items-start gap-5 my-5">
+        <p class="text-base font-normal leading-7" id="header-para">
+          Shop Online. Pickup Today. It's Fast, Simple and Easy. Learn More.
+        </p>
+        <h1
+          class="font-dm text-5xl font-bold leading-16 tracking-[0%] mt-0 mb-7"
+          id="header-heading"
+        >
+          Fast, Simple and Easy
+        </h1>
+        <ul class="flex self-start gap-5 font-medium mb-3">
+          <li class="underline underline-offset-8 hover:cursor-pointer">All</li>
+          <li class="hover:cursor-pointer">New</li>
+          <li class="hover:cursor-pointer">Used</li>
+        </ul>
+        <form
+          class="bg-white text-black flex flex-col justify-between items-center px-8 lg:px-10 py-4 lg:flex-row gap-4 m-auto lg:m-0 rounded-3xl w-full lg:w-auto"
+          id="search-form"
+        >
+          <!-- dynamic -->
+          <select
+            class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border rounded-2xl md:border-r border-gray-300 w-full lg:w-auto bg-white focus:outline-none"
+            aria-label="any makes"
+            required
+            id="any-makes"
+          >
+            <option>Any Makes</option>
+          </select>
+          <select
+            class="cursor-pointer text-[#050B20] px-16 py-6 lg:py-3.5 border md:border-r border-gray-300 rounded-2xl w-full lg:w-auto bg-white focus:outline-none"
+            aria-label="any models"
+            required
+            id="any-models"
+          >
+            <option>Any Models</option>
+          </select>
+
+          <!-- Prices Dropdown -->
+          <select
+            class="border border-gray-300 rounded-2xl px-16 py-6 lg:py-3.5 w-full lg:w-auto bg-white text-[#050B20] focus:outline-none"
+            aria-label="any prices"
+            required
+            id="any-prices"
+          >
+            <option>Any Prices</option>
+            <option>Under $20,000</option>
+            <option>$20,000 - $50,000</option>
+            <option>$50,000 - $100,000</option>
+            <option>Over $100,000</option>
+          </select>
+
+          <!-- Search Button -->
+          <button
+            class="bg-[#405FF2] px-16 py-6 lg:py-3.5 rounded-2xl text-white font-medium flex justify-between items-center hover:cursor-pointer w-full lg:w-auto hover:bg-blue-500"
+            aria-label="search"
+            type="submit"
+            id="search-btn"
+          >
+            <i class="fa-solid fa-magnifying-glass mr-8"></i><span>Search</span>
+          </button>
+        </form>
+      </main>
+      <!-- footer-scroller -->
+      <footer
+        class="flex justify-start items-center gap-20 overflow-x-scroll md:overflow-hidden"
+      >
+        <button
+          class="flex justify-around items-center cursor-pointer car-type bg-black text-white pl-7 pr-10 py-5 rounded-3xl"
+          aria-label="SUV"
+        >
+          <img class="h-4 mr-2" src="./public/assets/suv.png" alt="suv-svg" />SUV
+        </button>
+        <button
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
+          aria-label="sedan"
+        >
+          <img class="h-4 mr-2" src="./public/assets/seden.png" alt="sedan-svg" />Seden
+        </button>
+        <button
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
+          aria-label="hetchback"
+        >
+          <img
+            class="h-4 mr-2"
+            src="./public/assets/hetchback.png"
+            alt="hetchback-svg"
+          />Hetchback
+        </button>
+        <button
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
+          aria-label="coupe"
+        >
+          <img class="h-4 mr-2" src="./public/assets/coupe.png" alt="coupe-svg" />Coupe
+        </button>
+        <button
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
+          aria-label="hybrid"
+        >
+          <img
+            class="h-4 mr-2"
+            src="./public/assets/hybrid.png"
+            alt="hybrid-svg"
+          />Hybrid
+        </button>
+        <button
+          class="flex justify-around items-center cursor-pointer car-type pl-7 pr-10 py-5 rounded-3xl"
+          aria-label="convertible"
+        >
+          <img
+            class="h-4 mr-2"
+            src="./public/assets/coupe.png"
+            alt="coupe-svg"
+          />Convertible
+        </button>
+      </footer>
+    </header>
+    <!-- Chat Bot -->
+    <aside>
+      <button
+        class="fixed bottom-10 right-10 z-50 hover:cursor-pointer p-2.5 rounded-full bg-gray-400 hover:scale-105 ease-in-out duration-300"
+        aria-label="chatbot"
+        id="chat-btn"
+      >
+        <img
+          src="./public/assets/chatbot.png"
+          alt="chatbot"
+          class="h-12 w-12 rounded-full"
+        />
+      </button>
+      <article
+        class="hidden fixed bottom-10 right-10 md:bottom-25 md:right-25 z-30 hover:cursor-pointer bg-gray-400 w-72 h-2/3 border-black flex flex-col justify-between gap-3 max-w-[90%]"
+        style="border-radius: 20px 20px 0 20px"
+        id="chats"
+      >
+        <header
+          class="flex justify-between items-center p-2.5 bg-gray-200 rounded-2xl w-full"
+        >
+          <h1>ChatBot</h1>
+          <button
+            class="z-50 hover:cursor-pointer p-2.5 rounded-full bg-gray-400 hidden"
+            aria-label="chatbot"
+            id="close-btn"
+          >
+            <img
+              src="./public/assets/close-x-svg.svg"
+              alt="close"
+              class="h-5 w-5 rounded-full"
+            />
+          </button>
+        </header>
+
+        <div
+          class="flex flex-col gap-3 overflow-y-auto px-2"
+          style="max-height: 85%; scrollbar-width: none"
+          id="chat-messages"
+        ></div>
+
+        <form
+          class="flex items-center gap-2 bg-gray-200 p-2 w-full"
+          style="border-radius: 0 0 0 20px"
+          id="chat-form"
+        >
+          <input
+            type="text"
+            class="flex-grow border border-gray-300 rounded-full outline-none text-md p-2 shadow"
+            placeholder="Type a message..."
+            id="input"
+          />
+          <button
+            type="submit"
+            class="bg-blue-500 text-white font-medium rounded-xl hover:bg-blue-600 transition p-2 hover:cursor-pointer shadow"
+            id="submit"
+          >
+            Send
+          </button>
+        </form>
+      </article>
+    </aside>
+
+    <!-- Top Selling Cars -->
+    <main class="px-10 text-black">
+      <article class="flex justify-between items-center pt-10 mb-6">
+        <h1 class="font-medium text-3xl leading-10">
+          The Most Searched <span id="top-selling-car-name">SUV</span> Cars
+        </h1>
+        <button class="leading-4 hidden md:block" aria-label="view all">
+          View All <span style="font-size: 30px">&#8599;</span>
+        </button>
+      </article>
+      <section id="noCarFound" class="hidden flex-col items-center justify-center p-8 min-h-64 bg-gray-50 rounded-lg shadow-sm border border-gray-200 ">
+        <section class="text-center">
+          <svg class="mx-auto h-16 w-16 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+          <h3 id="noCarFound" class="mt-4 text-xl font-semibold text-gray-900">No Cars Found</h3>
+          <p class="mt-2 text-sm text-gray-500">We couldn't find any vehicles matching your search criteria.</p>
+        </section>
+      </section>
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        id="top-selling-cars"
+      ></main>
+    </main>
+    <!-- Popup Window -->
+    <div
+      id="popup"
+      class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50 p-4"
+    >
+      <div
+        class="bg-white rounded-2xl shadow-2xl relative w-11/12 max-w-4xl border border-gray-100 flex flex-col md:flex-row overflow-hidden"
+      >
+        <!-- Left Side - Image -->
+        <figure class="md:w-2/5 overflow-hidden">
+          <img
+            id="popupImage"
+            src=""
+            alt="Car Image"
+            class="w-full h-full object-cover"
+          />
+        </figure>
+
+        <!-- Right Side - Content -->
+        <div class="md:w-3/5 p-6 flex flex-col">
+          <!-- Close Button -->
+          <button
+            id="closePopup"
+            class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 transition-colors duration-200 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 hover:cursor-pointer"
+          >
+            <span class="text-2xl">&times;</span>
+          </button>
+
+          <header class="pb-3 border-b border-gray-100">
+            <h1 id="popupTitle" class="text-xl font-bold text-gray-800"></h1>
+            <p id="popupDesc" class="text-gray-500 text-sm mt-1"></p>
+          </header>
+
+          <main
+            class="flex justify-between py-5 border-b border-gray-100 flex-grow"
+          >
+            <section class="flex flex-col items-center gap-2">
+              <div class="bg-blue-50 p-2 rounded-full">
+                <img src="./public/assets/miles.png" alt="miles" class="h-6 w-6" />
+              </div>
+              <span id="popupMiles" class="text-sm font-medium"></span>
+            </section>
+
+            <section class="flex flex-col items-center gap-2">
+              <div class="bg-green-50 p-2 rounded-full">
+                <img src="./public/assets/kilometer.png" alt="fuel" class="h-6 w-6" />
+              </div>
+              <span id="popupFuel" class="text-sm font-medium"></span>
+            </section>
+
+            <section class="flex flex-col items-center gap-2">
+              <div class="bg-purple-50 p-2 rounded-full">
+                <img
+                  src="./public/assets/automatic.png"
+                  alt="transmission"
+                  class="h-6 w-6"
+                />
+              </div>
+              <span id="popupTransmission" class="text-sm font-medium"></span>
+            </section>
+          </main>
+
+          <footer class="py-4 flex justify-between items-center mt-auto">
+            <p id="popupPrice" class="font-bold text-xl text-gray-800"></p>
+            <button
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-medium shadow-sm transition-colors duration-200 flex items-center hover:cursor-pointer"
+            >
+              Buy Now
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buy Car & Sell Car -->
+    <section
+      class="mx-auto px-10 py-12 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6"
+    >
+      <!-- Buy Car Card -->
+      <article class="bg-blue-50 rounded-lg p-8">
+        <header>
+          <h2 class="text-3xl font-bold mb-4">
+            Are You Looking<br />For a Car ?
+          </h2>
+        </header>
+        <p class="text-gray-700 mb-6 max-w-70">
+          We are committed to providing our customers with exceptional service.
+        </p>
+        <footer class="flex justify-between items-center">
+          <button
+            href="#"
+            class="bg-blue-600 text-white px-7 py-5 rounded-2xl hover:bg-blue-700 inline-flex items-center hover:cursor-pointer"
+            aria-label="Get Started"
+          >
+            Get Started
+            <svg
+              class="w-4 h-4 ml-2"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <figure class="w-28 h-28 hidden md:block">
+            <img src="./public/assets/buy-car.png" alt="buy-car-svg" />
+          </figure>
+        </footer>
+      </article>
+
+      <!-- Sell Car Card -->
+      <article class="bg-pink-50 rounded-lg p-8">
+        <header>
+          <h2 class="text-3xl font-bold mb-4">
+            Do You Want to<br />Sell a Car ?
+          </h2>
+        </header>
+        <p class="text-gray-700 mb-6 max-w-70">
+          We are committed to providing our customers with exceptional service.
+        </p>
+        <footer class="flex justify-between items-center">
+          <button
+            href="#"
+            class="bg-gray-900 text-white px-7 py-5 rounded-2xl hover:bg-gray-800 inline-flex items-center hover:cursor-pointer"
+            aria-label="Get Started"
+          >
+            Get Started
+            <svg
+              class="w-4 h-4 ml-2"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <figure class="w-28 h-28 hidden md:block">
+            <img src="./public/assets/sell-car.png" alt="sell-car-svg" />
+          </figure>
+        </footer>
+      </article>
+    </section>
+    <!-- Four USP -->
+    <article class="px-10 py-16 flex flex-col md:flex-row">
+      <header class="mb-16 flex-1">
+        <h2 class="text-4xl font-bold text-gray-900">
+          We're BIG on what<br />matters to you
+        </h2>
+      </header>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 flex-1">
+        <!-- Special Financing Offers -->
+        <article class="flex flex-col gap-4">
+          <figure class="w-12 h-12">
+            <img src="./public/assets/fin-offer.png" alt="final-offer-img" />
+          </figure>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Special Financing Offers
+          </h3>
+          <p class="text-gray-600">
+            Our stress-free finance department that can find financial solutions
+            to save you money.
+          </p>
+        </article>
+
+        <!-- Trusted Car Dealership -->
+        <article class="flex flex-col gap-4">
+          <div class="w-12 h-12">
+            <figure class="w-12 h-12">
+              <img src="./public/assets/car-dealership.png" alt="final-offer-img" />
+            </figure>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Trusted Car Dealership
+          </h3>
+          <p class="text-gray-600">
+            Our stress-free finance department that can find financial solutions
+            to save you money.
+          </p>
+        </article>
+
+        <!-- Transparent Pricing -->
+        <article class="flex flex-col gap-4">
+          <figure class="w-12 h-12">
+            <img src="./public/assets/trasparent-prising.png" alt="fin-offer" />
+          </figure>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Transparent Pricing
+          </h3>
+          <p class="text-gray-600">
+            Our stress-free finance department that can find financial solutions
+            to save you money.
+          </p>
+        </article>
+
+        <!-- Expert Car Service -->
+        <article class="flex flex-col gap-4">
+          <figure class="w-12 h-12">
+            <img src="./public/assets/car-service.png" alt="fin-offer" />
+          </figure>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Expert Car Service
+          </h3>
+          <p class="text-gray-600">
+            Our stress-free finance department that can find financial solutions
+            to save you money.
+          </p>
+        </article>
+      </section>
+    </article>
+    <!--Popular Makes -->
+    <section class="bg-[#050b20] text-white w-full">
+      <article class="flex justify-between items-center px-10 pt-20 mb-6">
+        <h1 class="font-medium text-3xl leading-10">Popular Makes</h1>
+        <button class="leading-4 hidden md:block" aria-label="view all">
+          View All <span style="font-size: 30px">&#8599;</span>
+        </button>
+      </article>
+      <nav class="mx-10 py-1.5 mb-2 border-b border-[#ffffff3d]">
+        <ul class="flex self-start gap-7 text-sm">
+          <li class="underline underline-offset-8 hover:cursor-pointer">
+            In Stock
+          </li>
+          <li class="hover:cursor-pointer">Audi</li>
+          <li class="hover:cursor-pointer">Ford</li>
+          <li class="hover:cursor-pointer">Mercedes Benz</li>
+        </ul>
+      </nav>
+      <!-- cards -->
+      <main
+        class="flex gap-7 overflow-auto scrollbar-hidden mx-10 py-8"
+        id="popular-makes"
+      ></main>
+      <section class="flex gap-6 px-10 py-10">
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:cursor-pointer"
+          aria-label="previous"
+          id="left-scroll"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+        <button
+          class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:cursor-pointer"
+          id="right-scroll"
+          aria-label="next"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </section>
+    </section>
+
+    <!-- Reviews -->
+    <section class="px-10 py-16">
+      <section class="flex justify-between items-center mb-12">
+        <h2 class="text-4xl font-bold">
+          What Our<br />
+          Customers Say
+        </h2>
+        <section class="flex gap-4">
+          <button
+            class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50 hover:cursor-pointer"
+            aria-label="previous"
+            id="previous-comment"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-50 hover:cursor-pointer"
+            aria-label="next"
+            id="next-comment"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </section>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Trustpilot Rating Section -->
+        <article class="flex flex-col gap-4">
+          <h3 class="text-xl font-semibold">Great</h3>
+          <section class="flex gap-1">
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+          </section>
+          <p class="text-sm text-gray-600">Based on 5,801 reviews</p>
+          <section class="flex self-start gap-5 items-center">
+            <i class="fa-solid fa-star text-2xl text-emerald-500 block"></i>
+            <span class="text-xl leading-6 font-medium">Trustpilot</span>
+          </section>
+        </article>
+
+        <!-- Review Section -->
+        <article class="flex flex-col gap-4">
+          <section class="flex items-center gap-2 mb-2">
+            <section class="flex gap-1">
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+              <i class="fa-solid fa-star text-xl text-emerald-500 block"></i>
+            </section>
+            <span class="text-sm text-gray-500">Verified</span>
+          </section>
+          <article class="mb-4 py-4">
+            <h3 class="font-semibold" id="name">Ali TUFAN</h3>
+            <p class="text-sm text-gray-500" id="profession">Designer</p>
+          </article>
+          <p class="text-gray-800 text-xl font-medium" id="comment">
+            I'd suggest Macklin Motors Nissan Glasgow South to a friend because
+            I had great service from my salesman Patrick and all of the team.
+          </p>
+          <figure class="flex gap-4 mt-4 items-center profile-photo">
+            <img
+              src="/public/assets/profile-1.jpg"
+              alt="Profile 1 photo"
+              class="w-12 h-12 rounded-full border-2 border-blue-400 p-0.5"
+            />
+            <img
+              src="/public/assets/profile-2.png"
+              alt="Profile 2 photo"
+              class="w-10 h-10 rounded-full"
+            />
+            <img
+              src="/public/assets/profile-3.png"
+              alt="Profile 3 photo"
+              class="w-10 h-10 rounded-full"
+            />
+          </figure>
+        </article>
+      </section>
+    </section>
+    <!-- Brnads -->
+    <section class="px-10 py-10 mb-10">
+      <article class="flex justify-between items-center pt-20 mb-6">
+        <h1 class="font-medium text-3xl leading-10">
+          Explore Our Premium Brands
+        </h1>
+        <button class="leading-4 hidden md:block" aria-label="view all">
+          Show All Brands <span style="font-size: 20px">&#8599;</span>
+        </button>
+      </article>
+      <main class="flex gap-5 overflow-x-scroll lg:overflow-hidden">
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./public/assets/audi-logo.png"
+            alt="audi-logo-image"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">Audi</p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./public/assets/BMW-logo.png"
+            alt="bmw-logo-image"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">BMW</p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./public/assets/ford-logo.png"
+            alt="Ford-logo-image"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">Ford</p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./public/assets/medrcedes-logo.png"
+            alt="medrcedes-logo-image"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">
+            Mercedes Benz
+          </p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./public/assets/peugeot-logo.png"
+            alt="peugeot-logo-image"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">Peugeot</p>
+        </figure>
+        <figure
+          class="h-44 w-52 flex flex-col justify-center items-center border border-gray-300 rounded-xl group"
+        >
+          <img
+            src="./public/assets/Volkswagen-logo.png"
+            alt="Volkswagen-logo-image"
+            class="h-24 w-24 group-hover:scale-110 transition-transform duration-300"
+          />
+          <p class="text-sm min-w-xs md:min-w-auto text-center">Volkswagen</p>
+        </figure>
+      </main>
+    </section>
+    <!-- Baner -->
+    <article
+      class="bg-[#F9FBFC] px-10 flex flex-col md:flex-row justify-between gap-10 py-20"
+    >
+      <figure class="lg:h-3xl md:h-2xl h-xl">
+        <img
+          src="./public/assets/flex-shine-play.png"
+          alt="car-img"
+          class="rounded-xl h-full hover:cursor-pointer"
+          id="baner-image"
+        />
+      </figure>
+      <section
+        class="flex flex-col max-w-xl justify-center items-start px-10 gap-6"
+      >
+        <h1 class="font-bold text[#050B20] text-4xl leading-14">
+          Flexible Finance For Added Shine
+        </h1>
+        <p class="text-sm leading-7">
+          AA Car Finance allows you to get a quote without affecting your credit
+          rating. Find a car from any dealer, and we'll do the rest. With a
+          large panel of 30+ lenders we can help most drivers.
+        </p>
+        <button
+          href="#"
+          class="bg-blue-700 text-white px-6 py-4 rounded-lg hover:bg-blue-800 inline-flex items-center hover:cursor-pointer"
+          aria-label="Find Out More"
+        >
+          Find Out More
+          <svg
+            class="w-4 h-4 ml-2"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 17L17 7M17 7H7M17 7V17"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </section>
+    </article>
+    <!-- video popup -->
+    <div
+      id="video-popup"
+      class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity duration-300"
+    >
+      <div
+        class="relative w-full max-w-4xl mx-4 overflow-hidden bg-white rounded-2xl shadow-2xl"
+      >
+        <!-- Close Button -->
+        <button
+          id="close-video"
+          class="absolute top-4 right-4 z-40 flex items-center justify-center w-10 h-10 text-gray-500 transition-colors duration-200 rounded-full bg-white/90 hover:bg-gray-100 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:cursor-pointer"
+          aria-label="Close video"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Video Container -->
+        <div class="overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9">
+            <video
+              id="video"
+              src=""
+              controls
+              class="w-full h-full object-cover"
+            ></video>
+          </div>
+        </div>
+
+        <!-- Optional Video Title or Caption -->
+        <div class="p-5 bg-white border-t border-gray-100">
+          <h3 id="video-title" class="text-lg font-medium text-gray-900"></h3>
+          <p id="video-description" class="mt-1 text-sm text-gray-500"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Stats -->
+    <article
+      class="px-10 py-14 flex flex-col md:flex-row justify-around items-center gap-6"
+    >
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-3xl leading-14">834M</h1>
+        <p class="text-sm leading-8">CARS FOR SALE</p>
+      </section>
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-3xl leading-14">715M</h1>
+        <p class="text-sm leading-8">DEALER REVIEWS</p>
+      </section>
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-3xl leading-14">96M</h1>
+        <p class="text-sm leading-8">VISITORS PER DAY</p>
+      </section>
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-3xl leading-14">230M</h1>
+        <p class="text-sm leading-8">VERIFIED DEALERS</p>
+      </section>
+    </article>
+    <!-- blog page -->
+    <article class="px-10 py-10">
+      <!-- heading -->
+      <article class="flex justify-between items-center mb-6">
+        <h1 class="font-medium text-3xl leading-10">Latest Blog Posts</h1>
+        <button class="leading-4 hidden md:block" aria-label="view all">
+          View All <span style="font-size: 20px">&#8599;</span>
+        </button>
+      </article>
+      <article
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        id="blog-post"
+      >
+        <!-- blog-1 -->
+        <!-- <section class="group">
+          <figure class="overflow-hidden rounded-2xl hover:opacity-80">
+            <img src="./assets/blog-car-1.png" alt="car-img" />
+          </figure>
+          <article>
+            <p class="py-1.5">
+              <span class="text-sm leading-6">Admin</span> &middot;
+              <span class="text-sm leading-6">November 22, 2023</span>
+            </p>
+            <p class="text-xl leading-7 hover:underline">
+              2024 BMW ALPINA XB7 with exclusive details, extraordinary
+            </p>
+          </article>
+        </section>
+        
+        <section class="group">
+          <figure class="overflow-hidden rounded-2xl hover:opacity-80">
+            <img src="./assets/blog-car-2.png" alt="car-img" />
+          </figure>
+          <article>
+            <p class="py-1.5">
+              <span class="text-sm leading-6">Admin</span> &middot;
+              <span class="text-sm leading-6">November 22, 2023</span>
+            </p>
+            <p class="text-xl leading-7 hover:underline">
+              BMW X6 M50i is designed to exceed your sportiest.
+            </p>
+          </article>
+        </section>
+        
+        <section class="group">
+          <figure class="overflow-hidden rounded-2xl hover:opacity-80">
+            <img src="./assets/blog-car-3.png" alt="car-img" />
+          </figure>
+          <article>
+            <p class="py-1.5">
+              <span class="text-sm leading-6">Admin</span> &middot;
+              <span class="text-sm leading-6">November 22, 2023</span>
+            </p>
+            <p class="text-xl leading-7 hover:underline">
+              BMW X5 Gold 2024 Sport Review: Light on Sport
+            </p>
+          </article>
+        </section> -->
+      </article>
+    </article>
+    <!-- FAQ -->
+    <section
+      class="w-full bg-[#405FF2] text-white flex justify-center md:justify-between flex-col md:flex-row items-start md:items-center px-10 py-10 gap-6"
+    >
+      <p class="font-medium text-3xl leading-7">
+        Have a Questions? Feel Free To Ask...
+      </p>
+      <figure class="flex gap-2">
+        <img
+          src="./public/assets/phone.png"
+          alt="mobile-phone image"
+          class="h-8"
+        /><span class="font-medium text-2xl leading-7">+91 884272842</span>
+      </figure>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#050B20] text-white py-16 px-10 mx-auto">
+      <!-- Newsletter Section -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+        <section>
+          <h2 class="text-2xl font-semibold mb-2">Join BoxCar</h2>
+          <p class="text-gray-400 mb-4">
+            Receive pricing updates, shopping tips & more!
+          </p>
+        </section>
+        <form
+  class="flex gap-4 w-full m-auto md:m-0 md:w-3/4 lg:w-xl relative"
+  id="signup-form"
+>
+  <input
+    id="email"
+    type="email"
+    placeholder="Your email address"
+    class="flex-grow px-5 py-4 rounded-3xl bg-gray-800 border border-gray-700 text-white w-full"
+    required
+  />
+  <button
+    type="submit"
+    class="px-7 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-3xl font-medium absolute top-2.5 right-3 hover:cursor-pointer"
+    aria-label="Sign Up"
+  >
+    Sign Up
+  </button>
+</form>
+      </div>
+      <!-- Pop Up Modal -->
+<section
+id="custom-popup"
+class="fixed inset-0 bg-transparent bg-opacity-50 flex justify-center items-center z-50 hidden backdrop-blur-xs"
+role="dialog"
+aria-labelledby="popup-title"
+aria-describedby="popup-message"
+>
+<article class="bg-white rounded-lg shadow-lg max-w-md w-11/12 p-6 relative">
+  <button
+    class="closePopup absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl font-bold"
+    aria-label="Close popup"
+  >
+    &times;
+  </button>
+  <header>
+    <h3 id="popup-title" class="text-lg font-semibold text-gray-800 mb-2">Thank You!</h3>
+  </header>
+  <p id="popup-message" class="text-gray-600 mb-4">Thank you for signing up.</p>
+  <footer>
+    <button
+      class="closePopup px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors w-full"
+    >
+      Continue
+    </button>
+  </footer>
+</article>
+</section>
+      <!-- Accordion FAQ -->
+      <section
+        id="faq-accordion"
+        aria-labelledby="faq-heading"
+        class="w-full py-10 rounded-lg shadow-md mb-10"
+      >
+        <h2 id="faq-heading" class="sr-only">Box Car FAQs</h2>
+
+        <article class="border-b border-gray-200 dark:border-gray-700">
+          <h3 id="faq-question-1">
+            <button
+              type="button"
+              aria-expanded="true"
+              aria-controls="faq-answer-1"
+              class="flex items-center justify-between w-full py-4 text-left text-gray-300 font-medium focus:outline-none hover:bg-gray-800 toggle-faq"
+            >
+              How do I list my car for sale on Box Car?
+              <span aria-hidden="true" class="ml-2 transform rotate-180"
+                >▼</span
+              >
+            </button>
+          </h3>
+          <div
+            id="faq-answer-1"
+            role="region"
+            aria-labelledby="faq-question-1"
+            class="py-4 text-gray-400"
+          >
+            <p>
+              To list your car, sign up or log in, navigate to the "Sell Your
+              Car" section, provide details about your car, upload images, and
+              set a price. Your listing will be live once reviewed.
+            </p>
+          </div>
+        </article>
+
+        <article class="border-b border-gray-700">
+          <h3 id="faq-question-2">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-2"
+              class="flex items-center justify-between w-full py-4 text-left text-gray-300 font-medium focus:outline-none hover:bg-gray-800 toggle-faq"
+            >
+              What documents do I need to sell my car?
+              <span aria-hidden="true" class="ml-2">▼</span>
+            </button>
+          </h3>
+          <div
+            id="faq-answer-2"
+            role="region"
+            aria-labelledby="faq-question-2"
+            hidden
+            class="py-4 text-gray-400"
+          >
+            <p>
+              You will need the vehicle title, registration, service history,
+              and a valid ID. Some states may require a bill of sale or
+              emissions test certification.
+            </p>
+          </div>
+        </article>
+
+        <article class="border-b border-gray-700">
+          <h3 id="faq-question-3">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-3"
+              class="flex items-center justify-between w-full py-4 text-left text-gray-300 font-medium focus:outline-none hover:bg-gray-800 toggle-faq"
+            >
+              How does Box Car verify the authenticity of listings?
+              <span aria-hidden="true" class="ml-2">▼</span>
+            </button>
+          </h3>
+          <div
+            id="faq-answer-3"
+            role="region"
+            aria-labelledby="faq-question-3"
+            hidden
+            class="py-4 text-gray-400"
+          >
+            <p>
+              Our team reviews all listings to ensure they meet our standards.
+              We also encourage sellers to provide detailed descriptions and
+              verified vehicle history reports.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Footer Links Grid -->
+      <footer
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16"
+      >
+        <!-- Company Links -->
+        <nav class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Company</h3>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="about us"
+            >About Us</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="blog"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="services"
+            >Services</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="faqs"
+            >FAQs</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="terms"
+            >Terms</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="contact us"
+            >Contact Us</a
+          >
+        </nav>
+
+        <!-- Quick Links -->
+        <nav class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Quick Links</h3>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="get in touch"
+            >Get in Touch</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="help center"
+            >Help Center</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="live chat"
+            >Live Chat</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="how it works"
+            >How it works</a
+          >
+        </nav>
+
+        <!-- Our Brands -->
+        <nav class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Our Brands</h3>
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="toyota"
+            >Toyota</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="porsche"
+            >Porsche</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="audi"
+            >Audi</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="bmw"
+            >BMW</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="ford"
+            >Ford</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="nissan"
+            >Nissan</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="peugeot"
+            >Peugeot</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="volkswagen"
+            >Volkswagen</a
+          >
+        </nav>
+
+        <!-- Vehicles Type -->
+        <nav class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Vehicles Type</h3>
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="sedan"
+            >Sedan</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="hatchback"
+            >Hatchback</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="suv"
+            >SUV</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="hybrid"
+            >Hybrid</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="electric"
+            >Electric</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="coupe"
+            >Coupe</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white" aria-label="truck"
+            >Truck</a
+          >
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white"
+            aria-label="convertible"
+            >Convertible</a
+          >
+        </nav>
+
+        <!-- Mobile App Section -->
+        <section class="flex flex-col gap-4">
+          <h3 class="font-semibold mb-2">Our Mobile App</h3>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-gray-400 hover:text-white bg-[#161c30] rounded-2xl py-2 px-4"
+            aria-label="apple store"
+          >
+            <i class="fa-brands fa-apple text-2xl"></i>
+            <span>Download on the<br /><strong>Apple Store</strong></span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-gray-400 hover:text-white bg-[#161c30] rounded-2xl py-2 px-4"
+            aria-label="google play"
+          >
+            <i class="fa-brands fa-google-play text-2xl"></i>
+            <span>Get it on<br /><strong>Google Play</strong></span>
+          </a>
+
+          <h3 class="font-semibold mt-4 mb-2">Connect With Us</h3>
+          <section class="flex gap-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white"
+              aria-label="facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white"
+              aria-label="twitter"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white"
+              aria-label="instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white"
+              aria-label="linkedin"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </section>
+        </section>
+      </footer>
+
+      <!-- Footer Bottom -->
+      <footer
+        class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800 relative gap-3"
+      >
+        <p class="text-gray-400 text-sm">
+          &copy; 2023 Boxcars.com. All rights reserved.
+        </p>
+        <section class="flex gap-4 text-sm text-gray-400">
+          <a href="#" class="hover:text-white" aria-label="terms & Conditions"
+            >Terms & Conditions</a
+          >
+          <span>&bull;</span>
+          <a href="#" class="hover:text-white" aria-label="privacy notice"
+            >Privacy Notice</a
+          >
+        </section>
+        <button
+          class="bg-[#405FF2] rounded-full hover:cursor-pointer h-12 w-12 flex items-center justify-center"
+        >
+          <span class="sr-only">Back to Top</span>
+          <a
+            href="#top"
+            aria-label="Back to Top"
+            class="h-12 w-12 p-2 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#405FF2] flex justify-center items-center"
+          >
+            <i class="fa-solid fa-arrow-up text-2xl text-white"></i>
+          </a>
+        </button>
+      </footer>
+    </footer>
+
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>

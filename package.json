@@ -1,0 +1,27 @@
+{
+  "name": "html-css-project-batch-2025-16",
+  "version": "1.0.0",
+  "description": "Implement the responsive website design assigned to you using tailwind or bootstrap.\r Instruction:\r - In figma link find design assigned to you - https://www.figma.com/design/mprnfc4vMAmyp5QRsCJI9S/75-%2B-Fantastic-Travel-websitr-Templates-(Community)-(Copy)?node-id=0-1&p=f&t=MRdABWa4sIs13WOv-0\r - Implement assigned design using tailwind or bootstrap with provided specifications\r - Clone repo - https://githyd.epam.com/karthik_lakshmanan/html-css-project-batch-2025-16.git\r - Create a new feature branch and push your code\r - Create merge request against main branch for code review\r - Get it reviewed and mark it as done",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@githyd.epam.com:karthik_lakshmanan/html-css-project-batch-2025-16.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^22.13.13",
+    "@types/workbox-sw": "^4.3.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "workbox-sw": "^7.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}

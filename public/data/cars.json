@@ -1,0 +1,85 @@
+ [
+      {
+        "id": 1,
+        "name": "Toyota Camry New",
+        "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
+        "image": "../public/assets/toyota.png",
+        "mileage": "15 Miles",
+        "fuel_type": "Petrol",
+        "transmission": "CVT",
+        "price": "$40,000"
+      },
+      {
+        "id": 2,
+        "name": "Volkswagen T-Cross-2023",
+        "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
+        "image": "../public/assets/Tcross.png",
+        "mileage": "15 Miles",
+        "fuel_type": "Petrol",
+        "transmission": "CVT",
+        "price": "$15,000"
+      },
+      {
+        "id": 3,
+        "name": "Mercedes C-Class-2023",
+        "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
+        "image": "../public/assets/cClass.png",
+        "mileage": "50 Miles",
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "price": "$150,000"
+      },
+      {
+        "id": 4,
+        "name": "Ford Transit-2021",
+        "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
+        "image": "../public/assets/fordTranssit.png",
+        "mileage": "250 Miles",
+        "fuel_type": "Diesel",
+        "transmission": "Manual",
+        "price": "$22,000",
+        "tag": "Great Price"
+      },
+      {
+        "id": 5,
+        "name": "Mercedes new GLC-2023",
+        "description": "4.0 D5 PowerPulse Momentum 5dr AW…",
+        "image": "../public/assets/newGLC.png",
+        "mileage": "50 Miles",
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "price": "$95,000",
+        "tag": "Low Mileage"
+      },
+      {
+        "id": 6,
+        "name": "Audi A6 3.5 - New",
+        "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
+        "image": "../public/assets/audiA6.png",
+        "mileage": "100 Miles",
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "price": "$58,000"
+      },
+      {
+        "id": 7,
+        "name": "Toyota Corolla Altis - 2023",
+        "description": "3.5 D5 PowerPulse Momentum 5dr AW…",
+        "image": "../public/assets/corolla-atlis.png",
+        "mileage": "1500 Miles",
+        "fuel_type": "Petrol",
+        "transmission": "CVT",
+        "price": "$45,000"
+      },
+      {
+        "id": 8,
+        "name":"Ford Explorer 2023",
+        "description":"3.5 D5 PowerPulse Momentum 5dr AW…",
+        "image":"../public/assets/fordExplorer.png",
+        "mileage":"10 Miles",
+        "fuel_type":"Diesel",
+        "transmission":"CVT",
+        "price":"$35,000"
+      }
+    ]
+  

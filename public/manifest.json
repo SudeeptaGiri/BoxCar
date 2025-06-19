@@ -1,0 +1,21 @@
+{
+    "name": "BOX CARS",
+    "short_name": "BOX CARS",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007BFF",
+    "icons": [
+      {
+        "src": "./assets/BOXCAR-light.png",
+        "sizes": "500x500",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/BOXCAR-dark.png",
+        "sizes": "500x500",
+        "type": "image/png"
+      }
+    ]
+  }
+  
